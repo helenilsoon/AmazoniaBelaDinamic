@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html><head>
+<title>Flexi product</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex,follow">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="flexiproduct_data/c222913f2970238ec2b0c58ee98ecc33c7ebc149.css" rel="stylesheet" type="text/css">
+<link href="flexiproduct_data/71624ca98231b4fc5c081c493cd3943b67b257e6.css" type="text/css" rel="stylesheet">
+<link href="flexiproduct_data/0579e1e4d20e28f92adaba484f8f11a42e2b5e68.css" type="text/css" rel="stylesheet">
+<link href="flexiproduct_data/8af9e4b83998500c0b6e29c7c6e16965eb05d0ec.css" type="text/css" rel="stylesheet">
+<style type="text/css"> .row--datepicker{ /*margin: 10px 0 10px 0;*/ } .datepicker__icon { font-size: 16px; } .nsb_searchtitle__title{ /*margin-bottom: 5px;*/ } .spacer--searchheader, .spacer--searchbox{ margin-bottom: 10px; } .spacer--datepicker{ margin-bottom: 1px; } .lang_is_rtl .datepicker__selectbox_checkin_label, .lang_is_rtl .datepicker__selectbox_checkout_label { margin-bottom: 2px; } .lang_is_rtl .nsb_searchtitle__title{ margin-bottom: 3px; } .lang_is_rtl .bicon-search { vertical-align: middle; font-size: 0.95em; } body{ font-size: 13px; } .searchheader__heading { font-size: 140%; } .datepicker_selectbox_inwrapper { margin-bottom: 5px; } </style> 
+<style>
+body {
+background-color: #ffbb39;
+font-size: 12px;
+}
+.searchbox__inp {
+}
+.searchbtn__btn {
+}
+.searchbtn__btn:hover {
+}
+.discoverbtn__btn{
+}
+.discoverbtn__btn:hover{
+}
+.b--btn-blue{
+}
+.b--btn-blue:hover{
+}
+.fromprice_pricetag{
+}
+.b--hover .fromprice_pricetag{
+}
+.fromprice_fromtag{
+}
+.b--hover .fromprice_fromtag{
+}
+.datepicker__checkin,
+.datepicker__checkout{
+}
+.datepicker__checkin:hover,
+.datepicker__checkout:hover {
+}
+.b_caltable a{
+}
+.b_caltable a:hover,.b_calSelected a{
+}
+.headerbar__container {
+}
+.b--btn {
+}
+.b--btn:hover, .b--btn.active {
+}
+.dd-container {
+}
+.dd-arrow-after{
+}
+.dd-arrow-before{
+}
+.guestpicker__list li:hover{
+}
+.guestpicker__list li.selected {
+}
+.citylist__list{
+}
+.citylist__item:hover{
+}
+.citylist__fromtag{
+}
+.citylist__item:hover .citylist__fromtag{
+}
+.citylist__item_pricetag{
+}
+.citylist__item:hover .citylist__item_pricetag{
+}
+.b_popupInner{
+}
+</style>
+</head>
+<body class="b_firefox b_firefox_63 nsb _nsb  is--pt   b--layout-">
+<div id="container" class="" style="height:250px;width:300px;">
+<form id="b_frm" action="//www.booking.com/searchresults.html" method="get" target="_blank">
+<div class="l--container l--flexelem" data-test="true" style="width: 300px; height: 250px;">
+<div class="l--block">
+<div class="l--row row--searchheader">
+<div class="searchheader__container ">
+<div class="searchheader__heading l--clearfix">
+<div class="b--pull-right">
+<div class="brandlogo__container ">
+<img class="brandlogo__img" src="flexiproduct_data/ebc3273565b5e682ccaf01872d2e046749306442.png" width="90" height="15">
+</div>
+</div>
+<div class="b--pull-left">
+<span class="bicon-search"></span>
+<span tabindex="0">Pesquisar</span>
+</div>
+</div>
+</div>
+<div class="spacer--searchheader"></div>
+</div>
+<div class="l--row row--searchbox">
+<div class="nsb_searchtitle__title">
+<label tabindex="0" for="b_destination">Destino/nome do hotel:</label>
+</div>
+<div class="spacer--searchtitle"></div>
+<div id="b_searchDest" class="b--grooved-box searchbox__wrapper headerbar__inputbar">
+<input class="searchbox__inp b--truncate ui-autocomplete-input" type="search" id="b_destination" name="ss" title="Ex.: cidade, região, bairro ou hotel específico" placeholder="Ex.: cidade, região, bairro ou hotel específico" data-menu-width="270" data-menu-height="125" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+</div>
+<script>
+(function( d, w ){
+var sp = {};
+// Sp generic name space
+sp.name = "Strategic Partnerships namespace";
+sp.gElm = function( elm ){
+return ( elm )? d.getElementById( elm ) : false;
+};
+// Define utilities set up.
+sp.utils = {
+name : "Strategic Partnerships namespace: Utilities",
+fileLoaded : true,
+init: function(){
+var et = B.require('et');
+var productType = B.env.b_product;
+var browserType = B.env.b_browser;
+var browserVersion = parseInt(B.env.b_browser_version, 10);
+var includeIE;
+var obj = ( this === w )? sp.utils : this,
+// This makes sure that the last file is loaded in before the functions start to run.
+checkIfLoaded = function(){
+if( obj.fileLoaded ){
+// Counter on the number of times we check if it exists.
+var counter = 0;
+setStage();
+// Autocomplete
+if( w.search_autocomplete ){
+w.search_autocomplete.init();
+$('#b_destination').autocomplete( {
+matchContains: true,
+max: 100,
+minChars: 2
+});
+} else {
+if( counter <= 100 ){
+setTimeout( checkIfLoaded, 100 );
+counter++;
+}
+}
+}else{
+setTimeout( checkIfLoaded, 100 );
+}
+};
+checkIfLoaded();
+return obj;
+}
+};
+w.sp = sp;
+})( document, window );
+</script>
+<script type="text/javascript">
+var search_autocomplete = {
+priority: 9,
+cur_ui_item: {},
+init: function() {
+var oThat = this,
+search_box = $('#b_destination'),
+search_form = search_box.closest('form'),
+search_fields = search_form.find('#b_searchDest'),
+saw_autocomplete = false,
+tracked_cal_exp = false,
+searched = false,
+selected_last = false,
+open_calendar = function() {
+//booking[sNSStartup].calendar.openPopupCalendar($('#b_checkin_day').get(0));
+};
+/* This function tracks experiments using dynamic tracking
+trackExperiments = function() {
+if(exp_autocomplete.autocomplete_more_params) {
+exp_autocomplete.trackExperiment(exp_autocomplete.autocomplete_more_params);
+}
+};*/
+$('#b_destination').keydown(
+function(e) {
+if(e.keyCode != 13){
+// Clean up old auto-complete data
+oThat.cur_ui_item = {};
+$("input[name='dest_type'], input[name='dest_id']").val('');
+}
+}
+).on('input', function () {
+// this is if user clears the form via x button on search field
+if (this.value == '') {
+$("input[name='dest_type'], input[name='dest_id']").val('');
+}
+});
+var exp_autocomplete = window.exp_autocomplete || {};
+search_box.autocomplete({
+source: '/autocomplete_3',
+extraParams: exp_autocomplete.search_autocomplete_params,
+minLength: 2,
+delay: 200,
+max: 10
+}).bind("autocompleteselect", function(ev, ui) {
+if(ui.item) {
+selected_last = true;
+oThat.cur_ui_item = ui.item;
+// Submit the form when the user picks a result and it's not the skipping option
+if( exp_autocomplete.user_has_dates ) {
+setTimeout(function() {
+//search_form.submit();
+}, 50);
+} else if(!$('#availcheck').attr('checked') && (parseInt($('#checkin_day').val(), 10) === 0 && parseInt($('#checkout_monthday').val(), 10) === 0 ) ) {
+// Open the calendar automatically if the user has no dates
+setTimeout(function() {
+open_calendar();
+}, 25);
+}
+}
+}).bind( "autocompleteopen", function(ev, ui) {
+// Close the calendar automatically when autocomplete is displayed
+if($('#calendar_popup').length){
+//booking[sNSStartup].calendar.closePopupCalendar();
+}
+if (saw_autocomplete === false && typeof _gaq != "undefined") {
+saw_autocomplete = true;
+}
+}).bind( "autocompletesearch", function(ev, ui) {
+selected_last = false;
+if(!searched) {
+searched = true;
+//trackExperiments();
+}
+})
+$('#autocomplete_skip').bind('click', function(){
+var $this = $(this),
+has_no_dates = (!exp_autocomplete.user_has_dates && !$('#availcheck').attr('checked') && (parseInt($('#checkin_day').val(), 10) === 0 && parseInt($('#checkout_monthday').val(), 10) === 0 ) );
+search_box.autocomplete( "close" );
+// Clean up old auto-complete data
+oThat.cur_ui_item = {};
+// Open the calendar automatically if the user has no dates
+if(has_no_dates) {
+open_calendar();
+}
+});
+updateDestId = function () {
+var dest_type_input, dest_id_input;
+if( dest_type_input = document.getElementById( 'dest_type' ) ){
+dest_type_input.parentNode.removeChild( dest_type_input );
+dest_id_input = document.getElementById( 'dest_id' );
+dest_id_input.parentNode.removeChild( dest_id_input );
+}
+// Check if something has been selected from auto-complete, if so clean up old fields and add autocomplete data
+if( oThat.cur_ui_item.dest_type ) {
+search_fields.find("input[name='dest_type'], input[name='dest_id']").remove();
+// Add the selected item's fields
+search_fields.append($('<input>', {type: 'hidden', name: 'dest_type', value: oThat.cur_ui_item.dest_type}));
+search_fields.append($('<input>', {type: 'hidden', name: 'dest_id', value: oThat.cur_ui_item.dest_id}));
+} else {
+var ss = $('#b_destination');
+// if user didn't change his search criteria, let's skip disambiguation page
+if ( (ss.attr('placeholder') == ss.val()) && exp_autocomplete.sess_dest_id && exp_autocomplete.sess_dest_type && exp_autocomplete.normalize_sbox_value) {
+search_fields.find("input[name='dest_type'], input[name='dest_id']").remove();
+// Add the selected item's fields
+search_fields.append($('<input>', {type: 'hidden', name: 'dest_type', value: exp_autocomplete.sess_dest_type}));
+search_fields.append($('<input>', {type: 'hidden', name: 'dest_id', value: exp_autocomplete.sess_dest_id}));
+}
+}
+}
+// Add an event for form submission
+search_form.bind("submit", updateDestId);
+window.updateDestId = updateDestId;
+return false;
+}
+};
+</script>
+<script>
+/*
+- This contains all the vars for the namespace */
+function setStage(){
+sp.vars = {};
+sp.vars.errors = {
+destinationErrorMsg : "Desculpe, precisamos de pelo menos parte do nome para iniciar a pesquisa.",
+tooManyDays : "Você selecionou uma data de saída para mais de 30 diárias após a data de entrada. As reservas só podem ser feitas por um período máximo de 30 diárias. Por favor, escolha outras datas.",
+dateInThePast : "A data de entrada selecionada já passou. Por favor, verifique suas datas e tente novamente.",
+cObeforeCI : "Por favor, verifique as suas datas. A data de entrada é anterior à data de saída. "
+};
+sp.vars.gen = {
+b_action : "flexiproduct",
+b_todays_date : "2018-10-26",
+b_checkIn : "Data de entrada",
+b_checkOut : "Data de saída",
+b_numNights : "Diária"
+};
+// TODO: Sort all of the naming out. Once all of the products have been consolidated the name space needs cleaning up to stay consistent.
+sp.gen = {
+difference : function( a, b ){
+return Math.abs(a - b);
+},
+id : function( elm ){
+return ( elm )? document.getElementById( elm ) : false;
+}
+};
+sp.variables = {};
+sp.variables.autocomplete_skip_suggestions = 'Pesquisar outras opções';
+// while we don't have disambiguation page, skip hotels and regions from autocomplete
+sp.variables.autocomplete_skip_hotels_and_country = '';
+// AB-1507 task. Add translation instead false once it's ready
+sp.vars.errors.destinationDataErrorMsg = "Selecione um destino na lista";
+// booking.perf = { log: function() {} };
+exp_autocomplete = {
+b_sb_autocomplete_predictions_url: '/autocomplete_3',
+"b_action" : 'flexiproduct',
+pageview_id : '56cd06078f250110',
+autocomplete_categories: {
+city : 'Cidades',
+region : 'Regiões',
+airport : 'Aeroportos',
+hotel : 'Hotéis',
+landmark: 'Pontos de Interesse',
+country : 'Países',
+district: 'Bairros'
+},
+autocomplete : {
+hotel : 'Propriedade',
+hotels : 'Hotéis',
+hotels_nearby : 'Propriedades nos arredores'
+},
+autocompleteESC : false,
+search_autocomplete_params: {
+stype : '1',
+lang : 'pt-br',
+pid : '56cd06078f250110',
+sid : '164c98e31a504bd0aa7b0a87574bd821',
+aid : 814732,
+should_split: 1
+}
+};
+}
+</script>
+<div class="spacer--searchbox"></div>
+</div>
+<div class="l--row row--datepicker">
+<div class="datepicker__selectbox_wrapper l--clearfix ">
+<span class="datepicker_selectbox_inwrapper">
+<span tabindex="0" class="datepicker__selectbox_checkin_label">
+Data de entrada
+</span>
+<span id="checkin_target" class="bicon-checkin datepicker__icon"></span>
+<select id="b_checkin_day" name="checkin_monthday">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25" selected="selected">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="b_checkin_month" name="checkin_year_month">
+<option selected="selected" value="2018-10">
+Outubro
+'18
+</option>
+<option value="2018-11">
+Novembro
+'18
+</option>
+<option value="2018-12">
+Dezembro
+'18
+</option>
+<option value="2019-1">
+Janeiro
+'19
+</option>
+<option value="2019-2">
+Fevereiro
+'19
+</option>
+<option value="2019-3">
+Março
+'19
+</option>
+<option value="2019-4">
+Abril
+'19
+</option>
+<option value="2019-5">
+Maio
+'19
+</option>
+<option value="2019-6">
+Junho
+'19
+</option>
+<option value="2019-7">
+Julho
+'19
+</option>
+<option value="2019-8">
+Agosto
+'19
+</option>
+<option value="2019-9">
+Setembro
+'19
+</option>
+<option value="2019-10">
+Outubro
+'19
+</option>
+<option value="2019-11">
+Novembro
+'19
+</option>
+<option value="2019-12">
+Dezembro
+'19
+</option>
+<option value="2020-1">
+Janeiro
+'19
+</option>
+</select>
+</span>
+<span class="datepicker_selectbox_outwrapper">
+<span tabindex="0" class="datepicker__selectbox_checkout_label">
+Data de saída
+</span>
+<span id="checkout_target" class="bicon-checkout datepicker__icon"></span>
+<select id="b_checkout_day" name="checkout_monthday">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26" selected="selected">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="b_checkout_month" name="checkout_year_month">
+<option selected="selected" value="2018-10">
+Outubro
+'18
+</option>
+<option value="2018-11">
+Novembro
+'18
+</option>
+<option value="2018-12">
+Dezembro
+'18
+</option>
+<option value="2019-1">
+Janeiro
+'19
+</option>
+<option value="2019-2">
+Fevereiro
+'19
+</option>
+<option value="2019-3">
+Março
+'19
+</option>
+<option value="2019-4">
+Abril
+'19
+</option>
+<option value="2019-5">
+Maio
+'19
+</option>
+<option value="2019-6">
+Junho
+'19
+</option>
+<option value="2019-7">
+Julho
+'19
+</option>
+<option value="2019-8">
+Agosto
+'19
+</option>
+<option value="2019-9">
+Setembro
+'19
+</option>
+<option value="2019-10">
+Outubro
+'19
+</option>
+<option value="2019-11">
+Novembro
+'19
+</option>
+<option value="2019-12">
+Dezembro
+'19
+</option>
+<option value="2020-1">
+Janeiro
+'19
+</option>
+</select>
+</span>
+</div>
+<div class="spacer--datepicker"></div>
+</div>
+<div class="spacer--dateblock"></div>
+</div>
+<div id="js--spacerBlock" class="l--block l--flex1"></div>
+<div class="l--block">
+<div class="l--row row--searchbtn">
+<button tabindex="0" type="submit" class="searchbtn__btn b--btn-blue b--pull-right">Pesquisar</button>
+</div>
+</div>
+<input type="hidden" name="error_url" value="/?aid=814732;">
+<input type="hidden" name="si" value="ai,co,ci,re,di">
+<input type="hidden" name="label" value="">
+<input type="hidden" name="lang" value="pt-br">
+<input type="hidden" name="aid" value="814732">
+<input type="hidden" name="sp_plprd" value="UmFuZG9tSVYkc2RlIyh9YVXcKaaJl1ClAzvCgTm65ePI1yVhy8-Fy_xzVfr0t-_63nbdb0tw_SO8j-wO31zC8fWUuSiMnzN-ZG3wnCXdjGDVh6dSkKVPpsWSkEcQqp_U">
+<input type="hidden" name="utm_campaign" value="nsb">
+<input type="hidden" name="utm_medium" value="sp">
+<input type="hidden" name="utm_source" value="FP_Searchbox">
+<input type="hidden" name="utm_term" value="814732">
+</div>
+<div id="b_calendarPopup" style="display: none;" class="b_popup"><div id="b_calendarInner" class="b_popupInner cal--medium"></div></div></form>
+<script>
+window.B = window.B || {};
+B.components = B.components || {};
+B.env = B.env || {};
+B.env.vName = '';
+B.env.vWidth = '300';
+B.env.vHeight = '250';
+B.env.calLabels = {
+"calendar_checkin": "Data de entrada",
+"calendar_checkout": "Data de saída",
+"calendar_nextMonth": "Mês seguinte",
+"calendar_prevMonth": "",
+"calendar_closeCalendar": "Fechar calendário",
+"calendar_url": 'https://www.booking.com/flexiproduct.pt-br.html?aid=814732;sid=164c98e31a504bd0aa7b0a87574bd821;fid=1540515084341;h=250;product=nsb;target_aid=814732;w=300&',
+"months": [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+"days": [ '2ª','3ª','4ª','5ª','6ª','Sa.','Do.' ],
+"months_text_dates": [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ]
+}
+B.env.csrf_token = 'T53SWwAAAAA=QgpwY24Jdpl_PwAS1IIunz3vq8qFyjQIaJ6jkZ7ljoWeJPIF2IJ86kywCABuQzb0Wddqc_KjN4bAwkR-zP9K4v0VTdI8eslATZhyZC8Wg_QPzlcJSLHjY1uaHNAij3Pb0Ivf27T25AnuRPmQAnpxa90eN8uMFHmik3WTS6ocPbfBhKc6RrazykYxxQScMwP3bgxyyBWgJ_UaABPn';
+</script>
+</div>
+<script src="flexiproduct_data/ead44c768e1b95aa72bce0f3ac398fbfafa306f4.js" type="text/javascript"></script>
+<script type="text/javascript">
+var booking_extra = {
+pageview_id : '56cd06078f250110',
+b_aid : '814732',
+b_target_aid : '814732',
+b_stid : '814732',
+b_lang_for_url : 'pt-br',
+b_lang : 'pt',
+b_action : 'flexiproduct',
+b_site_type_id : '1',
+b_partner_channel_id: '2',
+b_ch : 'a',
+b_countrycode : '',
+b_companyname : 'Booking.com',
+b_protocol : 'https',
+b_fid : '1540515084341',
+b_sid : '164c98e31a504bd0aa7b0a87574bd821',
+b_product : 'nsb',
+b_browser_version: '63',
+b_browser : 'firefox',
+csrf_token : 'T53SWwAAAAA=QgpwY24Jdpl_PwAS1IIunz3vq8qFyjQIaJ6jkZ7ljoWeJPIF2IJ86kywCABuQzb0Wddqc_KjN4bAwkR-zP9K4v0VTdI8eslATZhyZC8Wg_QPzlcJSLHjY1uaHNAij3Pb0Ivf27T25AnuRPmQAnpxa90eN8uMFHmik3WTS6ocPbfBhKc6RrazykYxxQScMwP3bgxyyBWgJ_UaABPn',
+b_gtt: "dLYAeZFVJfNTBdVPGcbBBSSUVJfcfHKCFeZfdVO",
+et_debug_level: '0',
+};
+for (var key in booking_extra) {
+if (booking_extra.hasOwnProperty(key)) {
+B.env[key] = booking_extra[key];
+}
+}
+var b_experiments = b_experiments || {};
+window.booking._onfly = [];
+window.booking.track = {
+queue: [],
+exp: function(value){
+if(!value) { return false; }
+this.queue.push(value);
+}
+};
+</script>
+<script src="flexiproduct_data/d50714b40cdcfc51f1667472401742f6525e7232.js" type="text/javascript"></script>
+<script src="flexiproduct_data/156a2a3a2d3b9915353f0478863601d852b9cde3.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function() {
+var prodLoadedData = JSON.stringify({
+data: {
+aid : '814732',
+fid : '1540515084341'
+},
+message: "prodLoaded"
+});
+$(function() {
+if (window.parent != window) { try { window.parent.postMessage(prodLoadedData, '*'); } catch (e) {} }
+$(window).on('message', function(e) {
+if(e.originalEvent.data === "Widget:InViewport") {
+sendViewToEvents();
+var config = {
+};
+for (var tag in config) {
+if (!config.hasOwnProperty(tag)) {
+continue;
+}
+B.et.stage(tag, config[tag]);
+}
+}
+});
+var detectionRecorded = false;
+function sendViewToEvents() {
+if (detectionRecorded) return;
+detectionRecorded = true;
+var data = {
+aid : B.env.b_aid,
+target_aid : B.env.b_target_aid,
+product_type : B.env.b_product
+};
+$.get('/affiliate/fp_view', data);
+}
+});
+})();
+</script>
+<script type="text/javascript">
+booking.jset = {"t":{"bLTLbFNJNfAFBaTfYSbC":1,"TMGCMMKe":1},"r":{"OMBUcJZLSEaGHbdCNNJcTBUGRbOAae":2,"NAFLeNQRYPYKDcdFIMNJJHMVGRCfDWMTeae":1,"IZVBdDRaDQDDMXC":1,"AEeNTffEebRKEMaMLVHNAEO":0,"TRYHYZeVNLDSUaPHbSPQHYddET":4,"BKPBHOUcbTDeLJVTeSdPeVNMcIVXENTWHAae":1,"BUeeHYYfPYHIeAKDXO":1,"aDMSVTMIeeHSYeGIbNXGDJae":1,"IZVTWRGMKTIDXKe":1,"ZdffJTcfODbLJbFcFbRAOAcEUC":0,"PPXGWbdfELJXIXJC":1,"NAFQOYXbPBePYaeJEVQMO":0,"OMHBHCMYQGCIBTFeFNHC":0,"PYNYWLfTLaUIDC":1,"YdXfdKNKNKPZZeHKOCeMJYGUVbOMFcWe":0,"OMBUfaNbdFOPXPRQNAYMVOXT":0,"YdXfCDWOODSScSAcCSCaIfWBbNXGDJae":1,"adUAVYCdFWVTcMWWXdCTdLNNQYT":0,"aaTBUTVceVPJWYCSJeXbRVCScVYAcWe":1,"NVNZZFHBHaZFeCSXDeeELSdAKWZC":0,"ZdfbGbIXbVdESOSBZTNCMC":0,"IZVTWRGcJfRXe":0,"ZdZaYPZZGbCeOeXefNUOUAaDeLBJMLaJXVT":0,"bQTVbJPLBJVeQceDFbZebWDVafFRWe":1,"OMBUTdSPSHNNMZJUIQEaBXe":1,"OMfEWNdeOIfMeSYIeBZSJeNfRRT":0,"AENNQASJXOTdJNQHT":0,"OTfdASFcOcNVXNRbDdJEIFEXGPQDBYKe":1,"AEWQSYYaO":0,"ZGdHBcOMOLQSQeFHJRRZJCDSBOcaGPaXe":0,"YdVNNRNLOWDfFVFKOUYLLLccCcCcCDeQcJWe":1,"NAREFeDUaFBdcEUDAFTdZbAPLSdMWGVT":2,"UBKeJAESfHcAJfaAUaJKe":2,"eWHJVXLQDVLHbXALKFTOJcGOOIBBO":1,"BOeaYHRIPTNUXeFZUHZUPXPRQCGVTfeDIVWZdJLT":1,"ZdffZZAefACQBYKe":0,"ZdfaYZGbEILWKHSfCSRBDHT":1,"HINCDOTXKeNLEHFO":0,"OLNYScXQOVZVYMO":0,"PPXGDSJMFbJBcJWe":1,"TcZJFASESPBDOQLdWTCUZZOeGDPHe":1,"adUAVYCOTCDdCNAUCNSFdBSSEaCbJFPfBfWDIbYO":1,"TYVBETfbYQQPLRZNTFUXT":1,"adUTWVQUOdFBXQFceHEVC":0,"ObUDDFeIBGcYbEfcWbaTaTaET":1,"NAREDUfEebWJcdPIHAdDTeSXeBJTTIPJLT":0,"NVNZWUOMbOcYdNHWOJPaaRLXVJVZVNFDNZae":0,"YdXfCDWOODSWTPULVeTCCCeSaT":2,"ZdZaYHUDIbAebJARGZaaNRaO":1,"HBAeCLQOSRKVSCEOADNET":1,"YPNdKNKNKHUSVGPQcaNYCLUDaXe":0,"OMZGILfBZGVNSNWWcPOBRWe":1,"dDfPJcbWEJWcSTNUEdCSZcTUSGbHXe":1,"BKPBHOUcbTDeLJabeQcJHebebPHOOYDLZaaRKDQUOXQC":0,"IZVHbVFabEDUMAPYXaRIYAC":1,"ZdZaYPZHRIPQeMfeUYUEbC":1,"AbPaQJdDBKJNOAKXVGDHFBdcEUC":0,"BZEFUUKIFbYTcTHBCSeBcTAWSCBcIO":2,"ZdZaYZGbEVdZISFPfSQWNAcHDCOODVLHfQBRPXdAOECdC":1,"YdXfCDWOODSWTPULVeTVRSebQAC":0,"NAFQNZIOMOQcbdGOHSFVdaWOUJPCC":1,"OMBUcJPXPRQICRO":0,"OLBEJMMLaWJSJPaXfEfPHe":0,"bPQIMbDXfBHZfKEeHBGLZHT":0,"IFIcfXFNSVBPQZVRNIBYEcNfDfYFMYdZadcUYcfJLO":4,"NVNZZFadUAAOFVYDVXAKQAQeceebXCbXPYDC":1,"NAFQNZIOLTYLJYIESFDBNacWXT":2,"OMZdfbAZZNcfaNaGaDSBXe":0,"EKBJZGDUXAYSTYUVIFIbAPcMEVFbeYO":0,"TWIaUDOHQRSEAKSFYWTJUWEVJaWe":0,"HINIFOLJWcDcIBNeSaTfRe":1,"ZOVFfMPSXPebBGPbLLXCUJGOaT":1,"ZOCDCcXWFGEVUDeHZTSJXUFcNRe":0,"OMPPXGDSFLFeIJJbbRCfPXeC":1,"OMHBVOIVSHT":0,"ObUJNDMLUCJCBOaRYaYYfPHe":1,"IZAeHHOVFaGUKQCXNHbFeKe":2,"aaTBUTVceVPJWYCSJeXfDC":1,"OAZEUfTIcbbdeJcSKe":1,"UBKeJOMfFdHMPOKZeZFeCeYIYXRJWe":1,"OMNAFQNZIOLdaWNCFdUCWcYUcO":2,"IZMXbFRURURYeIbVSEdLRSUPRALRe":1,"eWHJVXLQDVLHbXALKFTOJcaT":0,"aaTBUTVceVPJWYCSJeXbJAWe":0,"NAFQADNBUaXaDDcJPae":1,"OLBEUdHTaHNfLEeUMZNYC":0,"ZGdHBcAETbGNMEMSXDbRT":1,"NAFLeNQRYJeVKcHaZFGbXHWGXdMBVPeNC":1,"HSLLaAbVTcHSWedNJdDBKWPC":0,"bLTLGMeCARTQSXT":2,"OMBUcJPeZBNPXYZBPBeRGWLae":2,"GbQUJDSWXQBObbQWTCUZceNGTODPBFO":1,"ZdfaYZGbBYaQadTGJNBdMQMLSWXGBbLPYO":0,"PPXGFGbJEEFDECdC":0,"bPFNaVIBacIHYKAZBBCWbVBGUO":1,"eDUIFOMaGZHWRHZGSNASVQLKGBHe":1,"EKCDEOBRUDbYTMWQeHT":0,"IZVJTVFbJCEUaQYKe":1,"OMBUTWWCQSFXVaKBIWe":0,"MKBUOMOOIBTCXDOBePOdVNFKFbbYREHGC":0,"OMHBVOINVBUKcTKe":1,"TMGCMMKe":0,"ZdfaYPZZGbEILFWUSGQZECCaVPKVC":0,"adUTWVJeVKcBUTUNMIbTZWKLWe":1,"IZALOLOLOCDOHJPBJXBHAPFPMdFO":0,"OLBdQSSXZFJbAXSPIfIBTFC":0,"ZOKBPabVLBLAZKBWGPXKKdPYKe":0,"BKPBHOUcbTDeLSHUTYcbWbHFbUDUfcdLVaXPceCRGWe":0,"ZOMTXEUDETacWIZKNFMNbQCQBAPTJWe":0,"YWYHfUDeAOTIWFReXNZeFAeOcRC":1,"PPXGWPHDDPOZJSSZdTYMIKe":2,"eDUIFOMaGZHWRHZGSNASVQLSLae":1,"HMeCDWOOJRdcFAYTZTbeQfYUVOXT":1,"BKPBZdZfQPIJHAFebedHPQcDMFbUC":2,"ZdZaYPZZGbMVFbUFcJaMdXCJCcMLaC":0,"BKPBHOUcbTDeLWDBKeJdQdJBcTPOfFRWXCObYBKGO":1,"adUTWAFcVWKHJGNJHVCFfSPXfQYT":1,"PYNNQAWRbHJQPYREHGSBCHSSZRe":1,"adUTWAFcVDIYQCXNaSIIWe":0,"ZdffCfQXRaeZXaIRdNFLFHAfEMO":0,"bPQIMbSBZFOMeEEHIbFMcaGO":1,"TcZJFASESPBDOLJeVKcAWWFGXbIUONSFTUQODWe":0,"BOeaQPBYQJJfOZJNSdKSAHe":2,"ZGdHBcEWAQPAZJCCTObMDVfFdNVAcMcZXeZfdUTURT":0,"OMBUVXFdWYcKMMTfNFfHFRT":1,"ZGdHBcOMPBddWTNDbFfKcVHe":1,"NAREFeDUaPFWURFTDWe":1,"ZOIFfEWNCCdOHGBfaNKe":1,"YTTeZCDCcYTTUKe":0,"OMBUVXFBKWXbbQMdOeZZSeESRQbICRO":0,"eWabOXWdFNLJPbIcbUKGMWUSCXO":0,"BKPBHBbOcNHPQcDMPBEONAdBAFVNaRe":1,"dDfPFTALSIPACQBeZYHcOTSLeNBLSRKe":0,"PeYdXDSDGNKJXcGBNVFCHDKWe":0,"IZVCFeaFBddQSBQFQLQFQcHe":0,"OLBEaBVLCBQZedeBVOSeKe":0,"bPFOMTeECUDeQfFRZXDMUBdOVIWC":0,"BZEFUUKCDAUONMPXKTWZcAZdJAINRe":0,"IZVYIAFZFJbXCZeXAZTbWRSPSOHSdNVZMYIO":2,"ZdZaYPZZWdQESUPHMVKdBLPRe":1,"TYVBETfTCEERBMLaSVIC":1,"adUAVYCOTCDdCNMFEAReDQbMbIHTPcQDPIXNDKe":0,"PPXGDSSXIOCARSXeLQRe":1,"NAFLJPIFNAFQICFHUeUEQYT":3,"ZOICQDZTSNJINFeTVSWFMbaTCMDeae":1,"adUTWALOLOLOdCTEIMeDXBNSNHRUUO":0,"AEJPCCIbNELHfNTDICRO":0,"OTfdASFdbdLYAHbBcZBTRSOeGDdKDaOLCFWWHSBXe":1,"YdXfTQOTBbLOTTSbSXT":1,"ZOAcFbMWcbQGWJGTZNODMTOae":0,"bQdCDWOOFefBQGMEcSOQUEZRIYHT":1,"adUTWVZeYDDFeSIMBO":1,"OLBEdaWNIODZOKQGO":1,"OTfdASFOHHAMXC":0,"YdXfCDWOODSWTPULVeTTUMKWe":1,"TcZJFASESPBDOQLOLOLOIHHZAXAWTCUZZOeGDPHe":0,"MKMBYeeZXQUAOWECKBcXAUADKe":0,"ZdfaYZGbMQMLZOTAAYNFGBHYWe":1,"eDUIFbOcYRQSWCKWFQTcfPTNWXXdVLHe":1,"ZdZaYZGbVWeLT":0,"VVPePPBBSUabSccESWFMOVORe":1,"eDUIFaGZHWRHZGSNASVQLSLae":1,"ZOTPeKbADNBZYVeHVEMMcQeKe":1,"GfYLBdJfaAUaJbIUONSQecLUBO":2,"IZALOLOLOCYEISeONFRYHbAZeOFSKe":0,"ZOMTXEUDEeNTffEcObXNUTEXbOQILbfDPdAXIVfSWBAPTJWe":1,"AEDEZRdPLbbHVJNSZWbBaCFJVKe":1,"aaTBUTVceVPJWYCSJeXbRVCScVYZHe":1,"HBHXeUTHUVAVALTKe":0,"dDfPJcbWdRYURDSPWLBeTfecNfTXC":0,"ObUWaHYYfPNSNHRUeIBbFdSHDUJPUSdKNKNKWe":0,"OMBUPTcAATIYVVPVdNXbNeZFFbDKeKe":0,"IZALOLOLOCDOHJPVCMILEEBXe":2,"OMebcEKCHT":0,"OAZEUfTIcbDNQBC":0,"ebccCcCcCWNVdVTPREFHT":0,"OLScXQOVZfUIDJKDKGXUFcNRe":0,"OMBUbSZNOdXbaDUGTAYAGHRYKe":1,"PPXGDSSfARGKBdHIYBZVET":1,"AfPcCWPWNBcJMIdOccPC":1,"YdXfCDWOODSSCaIfWHT":1,"HSLLaAbVTcUXWAcfRXe":1,"bPQOIIEeYYSVHJaMDfDXKe":0,"NAREDUfZZGbCATANNWJcdPIHAdRKdPIHAEdaRO":0,"TYALOLOLOKOCSdbQHZfMTeRFO":0,"TcZJFASESPBDOLBBVYUfFdHMHSWedNDeQfYYT":1,"NVNZZFadUAAOFVYDVXAKQAQecMWWXdCTae":0,"TYVGHUJSPbbDfKScedYXe":0,"OTfdASFVFYBMFSIJWe":1,"ABbFLFcHCbXfVQLXAae":1,"IZVEEJPBadDPISRO":2,"PPXGWPHDDZGbdFAfAMUC":0,"YPNVSPXBFAHNVIFAPNPDcNVBUKcbKWe":1,"OMBUcPFAcQZWfCYFXUJFYbdbORe":2,"OMcDPcVDZBAcDXNbeVTAVGO":0,"IZVTWRGHCGWVbQPaeKfRXe":1,"AfPcCSBVVPEfTTSVGPRe":0,"IZVTWRGTZCfZZdQdJACMXC":0,"PdeCIYUTOQbIZJDIFPBNbUPeDbYScXQOVWe":1,"bLTLTNeNcJHRXeZNTDdOSabcTBZaTaTaET":0,"OMebcEKOBO":1,"IZVJPCYEIWKRaJbNXGDJae":0,"ZOADaNAcFfBWEYcZbBLULECWEeJZGOaKefBQGVT":0,"BPHOUaYZdQAEbHeFUPecLUTIBZbC":1,"ZGdHBcOMTWWCQSFTWePHFBddQC":0,"aAEbDHDSCaIbaWe":1,"ZdffZZQTZOUdTDPNGZfROQFSddBC":1,"ZdfaYPZZGbIXbBAFQJTcEBC":1,"PPXGWNOSXe":0,"OLBENYDcLOIPNFNPbNaRReaHIfFKbSXT":1,"YdXfdKNKNKPZZNaXTUHfOSBAC":2,"TcZJFASESPBDOLBBVYUOQWTCUZZOeGDPHe":0,"NAREFeDUfXMPJXcYQWDdCMAWe":1,"EKBJZGDUXAYSTYUaMYTDfYaJVcTC":1,"AEJPBcJMGNAXXeLEHeae":1,"OTfdASFcCDSDGTKZZfFTWWCQSFTMFZZcO":0,"BKPBOMBUcFDSddLeMZDWLYBXNJYGbQfC":0,"OMfEWZTNWfbTZWKNeHT":0,"IZVJTVFabEDUMAPYXaRIYAC":1,"TMGCMMbOC":1,"VOffSLNULFHOHRCTeMeRGWLEcLcDOJaYO":0,"ZGdHBcOMIZdZGIGPPFCWDDZAWe":1,"ZdZaYZGbCcTdWcbeBOPTKYCHT":1,"OMVXFPBEOTVXGYaQC":1,"ZGdHBcdWKZGdCNETAEeTTPZAYWVaWYdaRO":0,"NAFQOYXbPBePYWdZeEKBGfQYO":0,"TcZJFASESPBDOLWdFSUCKAWTCUZZOeGDPHe":1,"ZGdHBcAETfbTbedWAKKSVOOBYTLRQJRKe":1,"OTfdASFcMTUNMIaAEUZSBXe":0,"BKPBHOUcbTDeLSePfNJYeJBDdKIXMBSHYILT":1,"ZSRAQKSLYUNIISSGWWOBMRVFWC":0,"ZdfbTQcfAZdbAPKSHLLTceMPBONYO":0,"EKBJZGDUXAYSTYUVIFIbAPcMEVFbeNAKfKSPYYQGXNdRT":0,"VOGYTBAETfHcTWePZAdPMeZELSVHFBdcEUC":0,"HSLLaAbVTcEFRdHedCEbHeFUHYWe":1,"VMIHCASeAdPLbbHVJNJYXQJdDBKFcMXbHKJPbBfSHXT":0,"BKPBHOUcbTDeLSVbXQDeHeIeNDUfcdLVaXPceCRGWe":1,"dDfPWPJcbWEJWcSTNUEdCSZcTUSGbHXe":1,"HSLQFRVQOITXeUMATNWPC":0,"bPFTeECUDeQfYUNVBUKcfJaAKDKe":0,"BZEFUUKIFZHdSIUaATRe":1,"cJacAcfEIRbGfCHT":2,"TMGCMMaYWe":0,"OTfdASFfGEFbAcafTVCDGTKPeCIYUBMC":1,"adUTWVHIBZdLfBOcaGPaXe":1,"BKPBbOcNDTRBELcAAcLWe":0,"PPXGDSSdYZCNKBTdFNRe":2,"NVNUdBBUTFPZaaNRfXIHVYTQWYQWCHFBddQC":1,"TcZJFASESPBDOLTbIUONSFTUQODWe":1,"ZOCDCXDOBAWWFYNSOZIUONSFYbJeAC":0,"ABbDENVdTWZRbWdQESHYO":2,"NAFLeNQRYBBVYUHaZFGbXHWGXdMBVPeNC":1,"OMBUYdXfMAPTKGFVOXT":0,"TYVBEDHKENHbUBWSMKe":1,"adUTWVBBVYUBBEbFeSICZHe":1,"OLBEdaWNOXHNVYFbYOdPACLO":0,"TYVBEVYBNQBSCdVPeUIHe":0,"ebcEKOBO":0,"ABbDSDAUaDdMPQHO":1,"EKBJZGDUXAYSTYUOOFeKe":1,"adUTWAFcVWKHRFTNCMcBUceYO":0,"TYVGHUJUMHPXYdaWBaVO":1,"MdQaTUJaAEbDZMIZHRO":0,"adUAVYCOTIFcOcdEPJHFCUBQEUaROEHT":0,"HSLQFRVQOITXeUMATNC":1,"HINCDOTOUCEFSUKBWKbZQaeKe":2,"AEeNTffFfRKEMaMLVHYO":0,"AEJPCcHMeTUIZaPFHTdC":1,"BOefRVBLcOHT":0,"eDUIFaGZHWRHZGSNASVQLKGBHe":0,"IZAUOYIfBcdSeEHNMdBcAEPAMXT":1,"MKMBYHIfFdHMeMeIJJbbC":1,"dDfPJVPQSYHebdfEfTHe":0,"ZdfbGbIXbVdCEVRGPQXRaeZMODFO":0,"TYVGPORIPZRSYNCBEC":1,"BKPBOQUKSIJPTcbYUeZOCROYO":1,"OMcJPHcVScELNOPbKe":1,"PPXGDSSaVSKDJGNPWe":2,"ebcEKCHT":1,"NAREFOMeDUfBePNQcfHNZXDOXC":0,"ZdfaYPZZGbIXbBJfBZGPBbWWe":1,"ZdfaYZGbOcMIESPIdJNcaNYCLUC":1,"ZCPQLEaXBATDCYQCXNaSIIWe":0,"dDfPJcbWEbCCEBOQUEdCSZcTUSGbHXe":0,"HBZCDPZNNAHT":1,"ZdfaYPZZGbXGBbLPNOeWFUDFTdKYEbJELZSXT":1,"PPXGDSFLFeIJJbbRCfPXeC":1,"IZVTWRGTWZIVKeEHXT":1,"YTTeZCDTYRKAUfPTCeYIUcCDZRT":1,"OMbTdNJYOHT":0,"EKAVUGOMHSWedNDeQfYUHSCQQSSXWe":0,"OTfdASFffedUdeVCFWUSBXe":1,"NAFQTPeVeRKTCYJNeDPJaAKDKe":1,"YPNdKNKNKZIYBJKbIYUYPNBJOTXNARHe":2,"UBKeJOMfFdHMbLYUZHfJPbAHEScXQOVWe":0,"dDfPWPJcbWEDEZREREHGSPWLBeTfecNfTXC":1,"NAFQNZIOMOLWLSQOQSZdOKET":0,"bPQOIfQAZFLMTeECUJNWFJIPRXe":0,"ZdZaYZGbONQfTZTNSIZGHO":1,"IZVbFUDIfMPSXPRXe":1,"UBKeJOLJMaUJFFWDIHe":0,"YdXfOTCMADDBDOLeFMDZSJWUIC":4,"BKPBOMbOcYceDUfcdLAeFEaO":1,"ZGdHBcEWAQPAZJCCTObMDFHbALbLdRTNLFeOeaO":1,"MKBUOMcCcCcCWRfDSTYDFJBZXZAQUaMEAKe":0,"ebcOOIBTCcHRXOSZWLKVSPHe":1,"OTfdASFcCDSSFDEeCIObTEUddSSLT":0,"BOeaYPZHRIPDKeSfBbQbZBHUJFYRZOJBaUC":0,"TcZJFASESPBDOLBBVYUAWWFGXbIUONSFTUQODWe":1,"IZAScKZYZLRCFKBEYHDDVRGCMC":1,"IZVJTVFaGUKQCXNHbFeKe":0,"ebccCcCcCWNIeDNafUUeYECC":1,"ZGdHBcOMIZEPRcYIZOALTKe":1,"OOOTAIFOQZGaHfLebbVT":0,"adUTWAFcVWKHDLfOFHe":0,"adUTWAFcVWKHJKDKGbNXGDJae":1,"NaMPdIeQMMfRXe":0,"TcZJFASESPBDOLJeVKcOQWTCUZZOeGDPHe":0,"VVDdHAEUZWeTaGZMTXEUDae":0,"adUTWVBBVYUcMUHVdeMXNZTZWKNYT":1,"YdXfdKNKNKZfFaQYfCYT":0,"cQZKPCbbVeScTYFPMbPHe":0,"adUTWVYNLdSNHRUUO":1,"OLBEaBVREHGUC":0,"bPQOIfQAZFLMTeECUFFGSGEcEXO":1,"HSLLaAbVTcEFRdHedCEbHeFUWe":0,"PPXGWPHDDZGbAUWcOUWe":1,"YdXfdKNKNKHUWcUPIcfVAecNfae":1,"BKPBHOUcbTDeLDbQNZESNOYDLZaaRKDQUOXQC":0,"NAFQOYXbPBePNRTNKJKfUIJSWe":0,"HMbOTMWFNUOYGKQYT":1,"YPNCDWOOFAHNVIFAPNPDcNVBUKcbKWe":0,"BUeeZaTaTaBEKMPXLae":1,"OMBUdbLMaCffHLLAWXHEREcYTLRQJRKe":0,"adUAVYCOTCDICWCaePMZABQMcWRET":1,"IZVPQZaQDVLHbQTZOUdTC":0,"OMBUVXFVCfLPQPAYAGHRYKe":0,"bQddKNKNKZTLSGQCMdbDceMdHKBEO":0,"IZALOLOLOVIZFDeQZVZAKe":0,"AEJPECSPNHLDUFYQeLT":2,"INJRFOMADUfQfQOHT":2,"AfPcCDSRDVaBVbJeDIBLaT":1,"PPXGWPFCWDVZPAcZMDJaT":1,"NAREDUfZHPdMYWEIFPSeZRTSbDBXSCFPCC":1,"PPXGJPSXfNZDbEWUdSIPPSfDHT":0,"IZVEEJPEVdZMZeFEBC":0,"OMTUSLQRNSYHedeBVOSZSXT":1,"ZdZaYZGbICWCGVbTZWKNYT":1,"OMfEJdDBKFHKXBPLQcGXKeKe":1,"OMdLYBZeEGGIGDRCWedNC":1,"cQZaTaTaBbOcYZDCQZGSRaPSWe":0,"UBKeJAEYBXYQCLBMC":0,"AETbNfecUJDbMOGdIO":2,"OMBUVScEBJUIQEaBXe":1,"AEaBLJWcFKUVXZePDaVeWJLdHC":0},"f":{"IZVBEEEJTTHHUUeBJXBHAPFPMZYVUO":1,"eDXBDYDRSLQKLXEOKdSLLRJAOOVT":2,"AEeNTffEcOfIHNALVSTGNPFDEQdPMTAcHe":1,"NVNeYFDEePEbPBDOLcLcDMbMLCAae":1,"OUdAHFMLaJIAERT":1,"dVRAfIEcOBafTYDEaBcDaYKe":1,"EGTUSGbVRSebQAFXRC":1,"OMaFIFIcaNfLae":1,"bZWOINZfMCUPPZXOTJBERJAXaaO":1,"TWIbdSdCDOTOSbYGVVWXQBObbLQYT":1,"NQEDBYbdBbfBASCXO":1,"BKPBOMZaAADUfcdLAeFMLaC":2,"IZVBESfILFceAKDKOeAFaIBNHC":1,"GfYLFcJeVHOVUVTSCTcO":1,"NAFQVaPBTNFeDUbGbVdKGUUPNTWORfJGEONDGNKJXcGET":1,"TULQWPHDDPPPeTSPWJZCYPIfKKSfBHRQWcC":1,"ebcOOIBTCcPAHET":1,"IZALOLOLOCYEIDKdZWdWVMcMbfBAC":1,"OMIZdFSMPMcQDDMPBTUZSTFWe":1,"NQEDATUWXIXHe":1,"BCdSRfMBKOAZbROfLMeMVOXT":1,"ZVLLXXZeGPNQLOCYeQMMKe":1,"EGTUSGbEJHIXT":1,"OdXfBFWKZJBBBEZeaPLUWZEZJO":1,"BIUJLMFPAAVCMILaAFZKXe":1,"NAREFBCdQddCcNQVdFVRZaefTMJKCWae":1,"OMOQYUfUKe":1,"IZVTWRGMPOOAUaLeFfZC":1,"HWAFYPYKDcdJeaILYDEaXCfAMO":1,"bZWOOSbYGVVDPdVO":1,"ZdfaYPZZGbIXbTRdcfAZdbAeKe":1,"BIUJLMFXRWeRFYLFSHHIKKDaeHbBGbbNZQYO":1,"ebccCcCcCWNTQIODbMNaINKVTKe":1,"YdAeYdHWNOTMeAZcGcZUbSBLXe":1,"cQPHbcGRcHMDCBMMTZdZTUSXRUIHe":1,"bQddYAEbWcBNHUO":1,"ZdffZZJAEccHQJNNUYO":1,"ebccCcCcCDSDNQUVUWZTNWfKe":1,"YPNBRfNdeQYcGcAPTPMPXKETfbdAVIXe":1,"BOeaYPZPDKeSfOMQfDbFWbIXVdVT":1,"HWAFYBEYFbYOdPACLO":1,"NAFQCJWZUfATXIebYfBLLeeZADXO":1,"dOUAAANHDDWMTeTQRbGbSMATBZSbHT":1,"NAFQCJWZUaPdMXVaPEQHYO":1,"adUTWVNYGZWLKALEeTdCNUIC":1,"ObUFIMNRFdVZMYCBBLVbcPBNeUFRURURHe":1,"NVNZZFZbFcINGLEXbKJKQXO":1,"adUAVYCCDWOOFWdEPDYGZEfKFWWQIVANUYKe":1,"ZOOVQLOLOLOEbHeFUHbBTIIHTHO":1,"IZVEEJPKbHMLECSKBZYO":4,"dVRAfIEcABTVVSUbMeJTSFGWIbQVO":1,"IZVTWRGVDOOGIBBbYWfeEDFO":1,"IZVYNeCCZZHe":1,"BCCFeYVAReJfaNaZeKGecRTKe":1,"OMIZdePedZbVeUZDHe":1,"YdXfdKNKNKPZZSIaDROSdPBRNeRIYYT":1,"NQEDdQZIUONSFXARPXcRC":1,"OMHBVOIVKQPGO":1,"NAREDUbJAEcZabQGWWOBTbQGWUC":1,"NQEDBcRJFBHIYLDbcGUO":1,"ZOKdFZbJFDCLATKGNKDZbRe":1,"aMYTDVMeMZNBFWKZSUTIPTNFLFARfDXSBObDNdQeRHfCRO":1,"adUAVGPZHFBddQDGDGTLeTXbNeZFDUMAPHe":2,"adUTWALOLOLOOTOeBDKASNHRUUO":1,"HVNKdFZbDdUYKe":1,"AEeNTfbDSBYcLcDOebcGBVC":2,"dVRAfHbcGRcOBeDAfeVWLPUHALUC":1,"BIUJLMFQBYWEIFYbdbVXMHO":1,"NVNUdOKTfGCab �     �                    0,�            P9�    ��            @�     @      @�            TULQFCSOHeHQITUWCZLOLHT":1,"EGTUSGbOOVLBLBBVYYT":1,"OMIZEZVZFJbEILFHYbcZTTae":1,"BCEQADRaPTLKGBfC":1,"BIUJLMDPBJFcOeQNUcTBLbBO":1,"OAZEUfTIcKe":2,"bZWOCUURKTWEcEHMeGbEHNMODFO":1,"IZVBETWTEfPZXPKVYJDUWe":1,"eDUIFOMBUeHWBZOWRHZGSNBafMGae":1,"NAREDUfEebJPLBJMWJcdPIHAEfPecUJC":2,"NAFQCJWZUbbXEIZBYPECYBZSET":1,"AEaBLTfTLKGBfFNKPfCQMWFbDVHT":1,"OMNQEDdQZIUONSFTUQODPACLO":2,"fTJXNCSLFJZZVCBOPQORHe":1,"NVNUdOKTfGCbWLKVUbAKIIRXJaMEAaRYfSCTaMO":1,"IZVHbAURAfPMcSPfWbXeRe":1,"IZVaCQRWSEFQECEEIAHTWBKHcMSWe":1,"OMUTVeVNNcfAZdGdXC":1,"IZVJIeNBLFfESVMPYWbHC":2,"OUdAHFaGbZEUfCRe":1,"HWAFYJPASVZKHDDORMTfLT":1,"OUdAHFYeMbHDMKPEaPJMC":1,"IZVBdLTLHbdMPPTLPNMZC":2,"NAFQCcEHTNcMXRaEcPBPHe":1,"OMUTVeVNNLTLBVcKYO":1,"PeYJYJbVHRVVCScKFCJBYEXe":1,"ZCPQLdZDWXKHQUETJTXAJNaGO":1,"OMBUcJPFDEVSVbXQFRWZXJHXFMLaTIVYTKe":1,"eWabOXWdFHCQTHAacOcePQOTeNJJNQUXC":1,"NAREDUaIXLCTdDMcVAWJWLWXAEANUYKe":1,"IZdFSdZNCdQeRHfEIEYIdbKOWe":1,"IZVHJYedGFdCYEIUJIPeDBFEO":1,"NVNUdXTOIVUbAKIIRXJHaZFdSCMMRcUSPFedZUC":1,"ZOVMeIJWdUAdKJeKTBPACLO":2,"PGVfOCaPbPELXVDaXe":1,"TWIaYPZHbFIRZZXGBbLPNMAWe":2,"OOOTACcPBeDFbPCaZZCGVKe":2,"IZVJTAURAfPMcSPfWbXeRe":1,"NVNeYRXQadHMMdFBYZUeQXO":1,"NAREFeDUbSIcdGXfFNUERCEPXdBGWe":1,"ZSRAQKSLFRHZPEEccaT":1,"dAQTIFBUaMEAaRYKe":1,"ebcOOIBTCcYSaBVOPJGUXe":1,"NAREDUbQfDfabRbDUHICNRGFTSDbXbbdVT":1,"YPNOKJeaILYDAZCCeLAeOaebECEFSWe":1,"NQEDVdBMTAZYBUC":2,"YPNdKNKNKHUDSFCRSRWAFHQIDafSbfZALOYO":1,"NAFQLFePNBMBTXOEdNSPFNGeCRe":1,"VOGHaZFbZWOCWKOdeZELO":1,"OTfdASFBPIaHZDVeWJLdHSBXe":1,"eRYPDXZNbOeERSCDfeBHMaGNYSGHVPHXe":1,"NVNUdBMRVDPELVaGXIbENRWSEFNZfC":1,"NQEDMPMPBNeURQedFNC":1,"ZOCDdGUKCMeMEOUNCDWOOC":2,"dVRAfIEcPYRJePMHRNQMWHC":1,"VKZOFTOTdfEJWcSXVVQaWe":1,"PGVfIFfESEOJZVbQPLREHGJMSUHfBQEQSVWe":1,"OUdAHFTFeFNPbNbVSTHe":1,"HWAFNFBfCeae":1,"cQHUJHeJMKWMAcQWe":1,"BCdJGGEGTUSGbdBSbC":1,"NVNeYFGLRWeYSCMXcaMdVIFAPHe":1,"ZGdHBcOMOdXHGUVIFAZEUEHdBXO":1,"OTfdASFBPIfQcUNDaAZRO":1,"adUAVGPZPUMVBFUPXMPZaefYSbC":1,"fXeWIbWUdSVYJKddXT":2,"IZVBdLTQNRXYCFQcEJKaEcTeCdUUKe":1,"MCMaJIZTffabSWUHbJTXGMEO":1,"NAREDUfHbcGRcPDdIIPJeVfRVKaMUPeeUJHKGTAcHe":1,"PGVfCDWOOSUTIVZdOCNETDJGTVWHT":1,"BIUJLMFPAACKDVfVTfHeYO":1,"ebccCcCcCJMWRbHJQPYQRe":1,"eWabOXWdFHCQTHAacOcePQOTeNJJNQUXWPHDDWe":1,"YdXfdKNKNKHUDPSKNCdENBYDIDeQcJPANAURAfPVT":1,"BCdSRfMBBABKHUcKJFHIXT":1,"NQEDKbUZdZKTVeBKeYEGZIUONSLT":2,"AEeNTffEebJKSCNLeCQMWC":1,"bLEGPBDWLaPJYVT":1,"dVRAfHbcGRcOBeDAfeVXKbOFYHNYO":1,"YPNOKFHMPdTDbMBMSPSGbHT":1,"AEeNTffEebWJcEXaJacaRILT":1,"OMHBTLEVaAJDbYZPYDYC":1,"NAFLeNLYMZGZBHSCLYZMWXe":1,"NVNZWUBIUJLMDbfGYUVILePTWEUNfJNfKBKGYbHT":1,"fXYcWASTWeIRdTSEOUWDKe":2,"IZVScXQOVHCcZffPCUcYRRRRT":1,"ZSRAQKSLFRPeYBPUDbbTKDfJSSXe":1,"ZOBJZGFCDUXAeQeDHWMZfPBePNZWOJNET":1,"MKBUOMHBePOdVYGGIWe":1,"YdXfOcMIdJKPSXaOTLGMPAFFLKC":1,"OTfdASFOMOQZWCGVbNJdQC":2,"OAZEeOFIMNFaO":1,"bZWOCUUSBVPEbBdTEdSFcCHPLecO":1,"YdVBETbEOTOCaIeJYKabWTaYSEO":1,"OMfEWNCCdOHGBfaNKe":1,"eDUIFcCcCcCDSDJBeHWBZOWRHZGSNBafMGae":1,"YdAeYdHWNdCBHcLOIYAeaSKQLSbQbMeICFQBPMKKe":1,"VCKLZOeERSCDfeBHMaGNYSaT":1,"HMeBLcXFcZdPPeae":1,"PPXGWZTJHBMKTIBLTWLPLSKFbC":1,"BIUJLMDcTBeNWOTAODRUWTIfTECEEIC":1,"PGVfIFOcHeIBePYaDdLHe":1,"NVNUdAaNCWQRAZUaDHOeWWbedRWSdQVeJbYYT":1,"OLBEAbZZOXHCcZLEPTVOdeae":1,"IZVNNcaKZXSMZVHHZTLdKfBNaeCXRe":1,"ZOCXDOBbSZNOdCaEDZSGaOMOZWBbYLT":1,"IZALOLOLOCYEISeONWKHWEYcZbdbSRe":1,"NQEDVSLKNdcNVBUKcKe":2,"OMHBMUYaSZUVfTcO":2,"eDXBDYJdYJNEQEBVXMHO":1,"ZdffHdJYePEbPBDOLYFbYOdHIDSJNbNFVUO":1,"OMTUSLLTfCbBQBTUC":2,"PYaCQHKKASUTIVYFYMZOYEbDWe":1,"HWAFNZcBDUHZLGCCBUKe":1,"HWAFYcbGUXVfLUO":1,"ZCPLJSEFKXNJdUeMADDbdEUbQWe":1,"dOUAAVeBGUeOUHLLaUcFbfHbfC":1,"OMZdfbUBPTVfINVJNFQJNZWMeKGUUWe":1,"OcRSYcTUQfbJKEeOXYYANAaddfYaKPXBEZNAAQYT":1,"HVNKdFGfHAZfTLKGBfFRWZXJXRAXZcO":1,"OMBUVXFHBTSDSFLFdfYOBYfTKYXT":1,"OTfdASFYRTXSMZKAFSTRbAOdHRAMDeJMBTeNJJNRe":1,"dVRAfIEcOBafTYSUTTdPUVYZICFLcOXT":1,"HWAFYeNMZSPDeHbLae":1,"BCMbbNCSBfXWaIJWHFAYTZTEeNGdLVT":1,"BIUJLMWeDfBAFZHVDAMRSEAKSFdBbJbLO":1,"OMHBVOIdFO":1,"OOOTAIFBUXCeFIfEQYbTZCCQJBTAcHe":2,"OMZbJMDeHbLGLLHNIKGYBSGQZIET":1,"eDTANZCLVXcfSJbQFdMdbDcHDQITFSYYBae":1,"ebcOOIBTCcYSaBZUYaHVAeJPGO":1,"IZALOLOLOCYEIWWFVQPYCFWSHMNET":1,"OTfdASFIZETQWUZbeKRJOLdKQNQFKe":1,"OTfdASFBPIabKeKeZQObdSVQZRO":1,"VCKLZOeERSCDfeBHMaGNYSGYEcNfDbEfKFWSfRe":1,"TUSLLZDECSPYRBXfPBQFXAWDdKXe":1,"HWAFYBZeEGGaLT":1,"ebccCcCcCWNIUeFMDRCAJfRdcC":1,"eRYZOeERSCDaWNWIacMcJWUSVGEZfWFPDYGWe":1,"VOfUbDQHDOeScbeVbNTNC":1,"ebccCcCcCWNTQIODbVT":1,"eIBbCDKdFBBeIJJbbRCfPSITEfPNDJae":1,"GbJAZNWUJdGTTKdWWe":1,"ObUJNDMLUCJCBOaRYbaTaTaET":1,"IZVBETWRGNHDKdcaKZXSMZVWe":1,"YdAeJXVNYHJfQAMOfNZDbAefQHO":1,"cQHDNACMMUYaC":1,"IZVdXFNPIITaYfFNZRO":1,"eDUIFNGEcZHbYZUCDLJOdVO":1,"eDUIFIZEWQFRRdHeKGUUZeEEZdKBQGVT":1,"OTfdASFOLJMXFSdYZdABYKe":1,"HWAFYRQfUUeDUfeSXfZdfVCMFDSFSWe":1,"NAFLJPCDVZMYCXCJIbZWMZfPXPRQIOWKHC":1,"OMTUSLQRYWEBJcIfYSbC":1,"PGfHEaKGbLREHGC":1,"IZVTWRGTeDBWSFBBbYWfeEDSBSSMJEQbBBORT":1,"NVNUdOKTfGCabPOZRTeCIFVUKeYEGeZVfLeOJNET":1,"NAFLeNLKKUHAbdQdJACIXaKefQcASKe":1,"VObdPHbcGRcHOHRCTeMeRGWLae":1,"TULQFCSHLLJcYTYGWOebJXNLZLOLZcTAcHe":2,"BCVRTHWAHOVMPNJJYDBSMTWGO":1,"eDUbKZIXXcffHNfLdPXUUBMDPVBC":1,"IZVaCQLOLOLOESBNbGYO":1,"IZVJTEVBaSAEdHHHUVCFWUC":1,"EGTUSGbOOVLBQLOLOLMO":1,"HWAFNJDKOLScXQOVWe":1,"adUAVYCOTCDTYFfOdCYO":1,"YPNXMAHNOJAEfPAUaCRe":1,"HMDVbOcMXRfBKXCJIOZQLTPeae":1,"TULQSHLLJcYTYGWOeaZNddRJXVaPEQHYO":1,"AbbITUWTbPFCFVbLNLNNQYT":1,"PPXGWPHDDZVcKYO":2,"OLBdQTbVSGVTBEUC":1,"fXNADZXDPZFbSZHe":1,"VCKLZOeERSCDfeBHMaGNYSGaAEbDZWeAXbYAFC":1,"fXNADZXDOXFNUOYGKQeHT":1,"TfNZeFeDUabPOZRTeCILT":1,"IZVEdRWPIYQWSCCCHRBcOHT":1,"NVNUdTJBdSYKNTFcSXaWXNC":1,"YdXfdKNKNKHUScSAcCJXfGPOSWEPGO":1,"ebccCcCcCWNOQPefWcdWfKKC":1,"NAFQLFePNBZNSTcTUaIQLPFVOdfLUBOfAZbTUNRe":1,"NAFQCDTPeVWLaMNSTWeIRdTWDDZJCWe":2,"OMUTVeVNNQAFQXGWecYUdXC":1,"HVFBYeSECVABUbQODOVVJKDKaT":1,"NAFQLFePNBZGZVGMVXRCUJMWScYbcEfFbeHGWe":1,"NQEDCDdQZIUONSFXARPXcRC":2,"IZEZVZSIHAfOCaJebYdUC":1,"NVNUdOKTfGCbaaNRfVfLUO":1,"BCVRTHWVJKEQfKCIPRfVVJTFeFbPQORLO":1,"HMeAcBaGbZdSNHRUUO":1,"IZVTWRGMCRAKLYYSPIDUPOET":1,"NVNUPfHbcGRcYQGVSCJBeVYWe":1,"NVNUdKTVeBKeYEGZeHNDVeMWcDaZeOWdUfPWcYKTRFO":1,"bHVNNRNRdFOGdCNMfefVZHSKBZYO":2,"NVNUdOKTfGCfAFfbHXSceIbeEccZHdafIdOeKe":1,"NAREDUbJAEcZabQGWWOBTbQGWUDPBFO":1,"VKZOFTOTdfEScXQOVPbbeOWdJJYJO":1,"adUTWVBBVYUBUTUNMIbTZWKNYT":1,"dVRAbUEQOYSSaHKLOWWbCATAJRXJeMNRUbEWBSMC":1,"NAREDUfHbcGRcccCeQcJFbNYSVXPPRDNYEFDIJYBRVKaMUWe":1,"YPNOKWZTNWfbAABfWAUC":1,"eDdJFOMOLNYRIGFOfVaKbNMbEUZJFSVVDAVT":1,"IZVTWRbcBBEAWHC":1,"NAREDUfHbcGRcHaZFbYDXYFdXaIRdNSHNYO":1,"BIUJLMFXRWeRFYLFSPCaFOUJPNSBdeTcRC":1,"NVNUdITXeUMATNFKMdYYcHaDEUZDBae":1,"AEeNTfbaaNRfATRKIXbRSUWe":1,"aaVTaRTCKWERSAcOXSbQBJOTXNVWRe":1,"VOGacPBUeBWcfFAeFbdbDHe":1,"ZOOKFFWTHBEUBXANGQEJWcDPBFO":1,"ebccCcCcCDSDNQcbRYfHYOZKe":1,"IZESaZEYZDEbeNBZXTQeFXUFcNQSYSBNaKe":1,"eDUIFcCcCcCSUfFcXZOFRWZXJHOTDWe":1,"aWOQKBYaSFHZMJIANEHREKe":1,"MKBUOMcCcCcCSOTUfZfONCRO":1,"ZSRAQKSLYUdddYMdIBeaT":1,"dVRAfHbcGRcOBeDAfeVWQQMRCaTCIFTYFPMbPYYDFVXKLJDC":1,"bLEGPBDDUcbLWdPZWKAKBdCJO":1,"NQEDdeMOHXdRT":1,"OMIZdFSAURAfPMdJEePWITEfWe":1,"VOfUbKPNceIWJAAFDEMbdOAJeKZBddAbDFCC":1,"ZdfaYZSITWWCQSFZSUNCQYKBPRe":1,"HWAFYWMVbXEQFBYCMYWe":1,"PGVfONfWJfFYAUIGZWfBPVOaDFTWZOC":1,"NAFLSHYYANAaddLbDYBLcOHT":1,"OMYQecbSGHET":1,"bQdMVSVOZGBaefOIYSYHDQIC":1,"aDMSVTMIeeZaTRBNeZVSRe":2,"NVNeYFHMPdTUFcKfELcHXFIQNNSIXe":1,"NAREDUfHbcGRcXRAXZZEPFWKEBVaBAZRQae":1,"VOffSLNULFHOHRCTeMeRGWLEcLcDOJNET":1,"NVNUdVVRIcbNXGDJEXAEEQYFGXITbedUfPC":1,"aWOQKBYaSFHZMJIAYO":1,"IZVTWRGVXVNVYYSPIDUPOET":1,"HVNKdFBMWARCfPSIMeZGHGRXZXe":1,"eDUIFBUaGZHWRHZGSNIBNPbNIFdbLMaCffWe":1,"OMUTVeVTbNKe":1,"dVRAfTBVZdOCSEQOYJMDDRCaTCIFaMEAKe":1,"HWAFNFCSDWLBJYTZLTNDeHZTSJEQfHXT":1,"IZVBETWRGfEDWQFKFbbeRe":1,"OTfdASFBPIfRFPAHBNHC":1,"PNLVJSPACLO":1,"IZVTWRGbHbFaJBBbYWfeEDFO":1,"HVFBNDeFabWGFVTEaJMWFLLTRe":1,"IZVTWRGEAFcFPIWDDJeVGTZVNWe":1,"ebcOOIBTOTOJNET":1,"NAFQOYXbPBePNLeVCBOWe":1,"bKeHAcCOSZMSMGGHSWedNTUQODWe":1,"OMUTVeVNYcSaERMJDDaORe":1,"HWAFYBEJPINfKBKBUZSHT":1,"HWAFNeOYJXAadKfXdfdTSfCSRBRT":1,"OUdAHFaGbZEUbQWe":1,"bZWOINZfMCUPTLKGBfWEYcZbBNfBCYO":1,"eDTANZBOSdUDMecIQSPSKBZCRO":1,"IZVTWRGdJMTRILYYSPIDUPOET":1,"YPNTUTZCWOJNET":1,"dVRAfHbcGRcIUfUYCeHHQRKIObAaNLbIIGBdZJNcTRe":2,"IZALOLOLOMIHeCXQQCXYYdCYEIYWVT":1,"NVNUdCYWORTeCISUZXDMUBdBaQDbRXOEdNWbHWEXbdQAWKAAXC":1,"HVFBYWQWSEQfPANVYDYMO":1,"OMHBbMWcdLTPFHNHCQDPTLKGBfC":1,"dVRAfHbcGRcOBeDAfeVYdOeEAeFEO":1,"bPFNVBUKcTbTZWKNYT":1,"NAFQEOCCBaOSJIbGdMFFERTWe":1,"AbbIdJCUHUaVUSPDUFYQC":1,"OMbKeHAcCOSHJOIHSWedNTUQODWe":1,"VOfTWZKZdBaXMZC":1,"ZdfaYPZHRIHRGSCQQcNcUC":1,"IZVYdTXaJNAeFOHHABeTfPTLPYO":1,"bLEGPBDDUcbLWdPZWKAKBEO":1,"IZEZVZFJbEILFHYbcZTTae":1,"NVSGPCbadWIRceZMVC":1,"ZOOKTfGCfNOSTUZbaeJTPOaXGZWeAXBQTdPYPDPZXKXVdOQWe":1,"dVRAfHbcGRcOBeDAfeVScXQOVHebCYZBVYAYDNHOeWWGO":1,"HWAFNLOLOLOOAJeKZBfaNKe":1,"OMBUcJPLIONYO":1,"ebcOOIBTCcEJDKeESPIDUPOBAeDbVBNHC":1,"IZdFSAPVFfSOVHJaMEATKe":1,"NQEDKbUZdZEKBGfQNMYEZUKe":1,"TWIbKZRSdFKFPfECIAdJNHFHDQIC":1,"OMUTVeVaKEWDQMRKe":1,"BdTeLBdFCSDWQFVRZaeKe":2,"eIIRaGPRbZcOINeUC":1,"eDTANZBOSXKFfDTNKGHYKe":1,"bZWOCUUJeaILSVHJTOVWCUC":1,"NAFQCJWZUbdaROBMZdHGUKQIIKe":1,"HWAFYRQTaXGfC":1,"dVRAfHbcGRcOBeDAfeAScaGQUEcPFVGHFBddQC":1,"IZVDEZRdPKPZFLECWCPQDeTRe":1,"NVNUdOKTfGCbYDDdGFdBLLEQYFGXITKe":1,"bHVNNQAFNSbeZKfbXZdcCcEO":2,"eIIRbYfOYXbHFBddQC":1,"bZWOINZfMCUPDHCOLZAURAfPMADDbddZQAHTRe":1,"YQecfBfIHSHFTXbaRVVCSHT":2,"IZdFSBYbUBPTTFceHEVFHJCdIO":1,"IZALOLOLOCYEIJdDBKJKdZfecNJdJRe":1,"NVNUdOKTfGCabPOZRTeCIFVUKeYEGeZVfLUO":1,"NVNZZFZbSOBNHFOUJPPaEBYAQFKBVafLIBEIGCfXYC":1,"OLBEEZEBeHdZBdHIYBZVET":1,"IZVTWRGXVWUDDJeVGTZVNWe":1,"adUAVGPZHYZaefTRedNDbQNZIXcYQC":1,"dVRAfIEcOBafTYDEaBcDfKGWHC":1,"IZVTWRGdeUfWVTWRbHT":1,"BCVRTHWARASXEZbVT":1,"VOfUaLMAWWFbZWOIZFbNYC":1,"dVRAfBDFIVZOFYZDNTNRKIOaXGHFBdcEUC":1,"NAFLeNLBEFTQZdbEWaHRIXTcTAcNcfEEHFRT":2,"NQEDMPMGDIcEbOYC":1,"TULQFTXOEMKbQfDKe":1,"YdXfTQOTEaXCZYbOMFcZUdYSCRe":1,"bZWOOUbIUbLPNBYabCZSWdJFYDVMYCTeSXNYFGYT":1,"HMbANHDFebIGICMSeLQOSRKXe":1,"OMbOcNYRXSfCSRBDceMTZeKWe":1,"EGTUSGbTdMefCfUTQNMZC":1,"ZCPLccGSOJdXMRfUFGFfPXPRQOOTYRRAAGO":1,"OMVXfZEBJbVEae":1,"IZEZVPIAAMLUCRDFFPOCaJeKe":1,"NVNefbDSBNFSUCDeILLbOMFcWe":1,"NVNeYSPPbHbPOZRTeCIFaIdTDJBfTKe":2,"NQEDBBNZFAYTZTdScdXWcfJZOFPdXe":1,"OAZEUYNaaSLUZBeHbeMJO":1,"NVNZZFZbSOBNPCfFbRLRMLFSZLJHPWdXe":1,"IZdPZSBacXVaPEQFSfDNRbaO":1,"ZOdGYBBVYUaOMZFQTXWDTDAVbBHMZNOBO":1,"IZVTWRGMGdDBKFXAWDDZINJaTXcVbOMNMTKe":1,"NQEDBMBAPTPWOGVO":1,"NQEDdQZIUONSFPTcZNMRKe":1,"BCdSRfMBBABKHUcKJFHIINLJWe":1,"NQEDdQZIUONSFTUQODWe":2,"dVRAfIEcOBafTYFWFceHEVFdeXe":2,"adUTWALOLOLOMAPPZTZWKNYT":1,"PGVfdKNKNKPKVRXZXe":3,"IZALOLOLOCYEIWEYcZbBCDBMURBNLJWe":1,"ZOTHGZGbCMbFMdSFTdDETdEHFZMC":1,"ZdfaYPZZGbIXbBJfBZGPBXLYSfDHT":2,"OMIdOccPSPDbMbJfdSDeSPeYdSZPdUSBbQbC":1,"eDUIFIZEXNWWcaGZHWRHZGSMdbDHT":1,"NAFQEIbeDdPTBVYeUINIQAXOeZJRIWUC":1,"HVFBNDeFabWPLeSECVABUbQMPXKVIFAPNHeJRAUIZbQWe":1,"ObUFcAPUYbdbALcO":1,"edDAIMKMBHe":3,"TcZJFASESPBDOLEQYFGXITbIUONSFTUQODWe":1,"IZALOLOLOCCCLJfYYddRdJceYO":1,"BKPBHOUcbTDeLDGKXWeFTPOfFRWXCObYBKGO":1,"NAFLeNQDPEebFcFPIWWXVXeLUbQZLJHPWdXe":2,"YPNOKTfGCbGQDbEFXEZVPfZBYPVCMILeMBBae":1,"TLEVXBabGReNOVXeDMWCZWJHbWKRaRT":1,"PGVfIFacTbSHQQLWe":1,"IZAZWdWVMcMOHHANdRdJceKbCWXe":1,"NQEDBcRJFBESWVT":1,"ObUWPFcAPUZNBAFQRT":1,"NVNUdOKTfGCfAFfbHXSceIbedUfPC":1,"bQdEbWcEIBKAXZAVeBGKMLTRe":1,"ZGdHBcOMHBEHdBXO":1,"BCVRTHWAJJYDBdeTcRC":1,"IZVBdQTDFdcGPPKNdaHOOCKe":1,"BCAURAfPMZKZPHcPET":1,"NAFQTPeVWLaMNSTWeIRdTWDDZJCWe":2,"adUAVYCOTdIcPRSSZWMAHcWIZFLMC":1,"ZCPQLdUeECedASZXJae":1,"BCIKELcHOPTDICRO":1,"YeBeZGQDCWVCMIRe":1,"ObURKUcbFdFCZEfPQcUNC":1,"PRFZReLAEBLLAZHeEAZedFaeMZWEYZLPNIBTaSdC":1,"AEJPVZMYCONebEJKDKbcVOXT":1,"dVRAfHbcGRcaaQZJScGMYWEIFASObEWWe":2,"OMUTVeVNNURe":1,"OTfdASFNHJRdcDUMGWSXT":1,"PGVfKbUZdcGZSAccTXYaSVbYSLdFSUCKXe":1,"NAFLeNLYMZGZBHSCQRfTUKe":1,"BCVRBdaJbCEQWeBUcJcLdaRO":2,"ZdfaYZGbEILJMFbSGeFTYcUO":1,"IZVaCQLOLOLOVZMYCBJZGFHMPdTDERXWUMKTKe":1,"dVRAfIEcABTVVSUaFMMPaKEbHeFUSeGDPHe":1,"BCAZWFRSPFQTKbRbbRe":1,"AEJPAaNCWLWdeFIPeRWJSC":1,"OMIZdFSMPMcQDDdUZSNdeBVOSWe":1,"adUAVYCCDdIcPRSSZWIKGYBSKBZKBHGCTEdaWYO":1,"BKPBOMOLZOTPAURAfPMZLOAXe":1,"IZVWeVFabEDUMAPHe":1,"IZVGHeCXLXXZeGPNcSNDeMSZIZQWe":1,"XdKHKLOWWKRWHFAYTZTEeNGTODVRGCMC":1,"IZVTWRGaDKTSAaaVYYSPIDUPOBNTBdVPGFYEQKe":1,"IZVScXQOVHRHVfALSIZeQMIVaDEUZYPYO":1,"eDUIFbOcNZJScAEcSaERMJDSUHHEdQbUC":1,"IZENYPERAMDBcPOeFYeMOKe":1,"NVNUdOKTfGCaDHOeWWbeEWMDYQCLBMDeEGaT":1,"YPNEUVIUIPUMJKDKGfFdHVT":1,"OMTUSLLWdLVJMJFC":1,"GfYQRfccMdLUZdcGZIUONSQecLUBO":1,"OMUTVeVZfZSAaaXe":1,"NAFQCJWZUaYSJeJcQYABKXaIRdNC":1,"VOfUbKPNceIWJAAFDEMbEO":1,"eIBbdQETJMFcMXLFeEVfJLFHT":1,"HWAFYSGQYMYWZMJGOaT":1,"ZdfaYZSIbcIcJHPWAUC":1,"HVNKdFZaaXbUKGMWDUFYQFXbaCEeKET":1,"AEeNTffEebSOebTZCCQJET":1,"IZEZVPKBZTJVPfOXSdXMDDBARGRT":1,"eDUIFbOcYEMMcQefHceEcYPGCKXe":1,"adUTWVJeVKccMUHVdeMXNZTZWKNYT":1,"IZALOLOLOCYEIDKEYddRdJceYO":1,"AEeNTffEebRKEMaMddcQPYT":2,"eDdJFOLNYRIGFOfVaKbNMbEUZJFSVVDAVT":1,"bKeHAcCOJNVGeZIXcYQC":1,"BOZRSdFKUOdZSEPFWSadcJC":1,"OAZEUfTIcaUSBVWYO":2,"adUAVYCCDWOODSFWFAYTZTEeNGTOC":2,"PPXGSOERWfIZIAcET":1,"AEJPECTRALDEZREScXQOVWe":1,"IZASHfeRaeCXQcSNDeMSeKe":1,"OMIZdFSdWPDGYUC":2,"NVNeYWPNFcdDeAWTAcEUDGDGEPEcREQC":1,"VOfUbKPNceIWJAAFDEMbdEQMXbZVO":1,"OTfdASFMRcUcZARYAFPJQdeQZRO":1,"IZVTWRGMMADDbddZQMdIVHDYHJZIUC":1,"OMUTVeAPJYGbABO":1,"HVNBcFfFcNWTCUZZOeGDPHe":2,"NVNUdKTVeBKeYEGPeCIYUEbWHSGDMFDSFSPRET":1,"NAFQADaNVeBGUedQPDKHFBddQC":1,"IZVRQYcMbfDYBHWXTZNOZPUOEaRONUFWUC":1,"aMYTJVPQccVOBHLJEIdaHLdeOEFFXJfSMbIaCOQdNC":1,"HWAFNeOYFebQTZVSCRSCWdaHMO":1,"PGVfVZMYCAXZLO":1,"AEeNTffFfDDFRWZXJGedOTdTUC":1,"HVNBcFfFcIXIHSWedNDeQfYYT":2,"VOfUacIJRSJTSXeUMAEWbQVUXLEcPPPC":1,"IZEZVPTLKGBfDbMaOMZWEYcZbVCMIRe":1,"NVNZZFYNZSEfEITNPffIMLZbJIIIKe":1,"MKMBNLOLOLOVLBQSceUCXJNOefFeUaPZIAcET":1,"PRFZReLWLRENZWLBebYIPfZBePYbBGREWDDPefWHT":1,"NAFQAUOEQGBTHXSJNeDHPdMfLfJRIUUKe":1,"BCOIEeUebYPVIBVPeNUC":1,"ZCPLccGSOSTBGCdKCaceWcfLXcKOHT":1,"IZAZWCcMLaSBBVYTWRGYRCOMXT":1,"NAFQLFePNBZNEKSPeNC":1,"dVRAfIEcOMafTYDEaBcDaYKe":1,"HVNKdFfQfNYAFOBYfQPCDWOORLRFWYO":1,"cQZKHPdMIbQbAEDDCRe":1,"dVRAbfdeDcYXcCHHQJEeeKET":1,"ZdZaRAaYPZZDJMLaDTdIO":1,"OMTULQWJcEXaWJPbWcZOMLTHO":1,"NVNUdOKTfGCfKIUFfdVPGJNWWecNRUbGXT":1,"HVFBNDeFabWPLREHGWOOeRZWDKe":1,"HMeOLYfOONcEScDaIHXFKOYO":1,"HWAFNRfDXSbHSfXOEIYZEDYO":1,"aMYTDVMeMZNBFWKZSUTIPTNFLFARfDXSBObDNOCROBTJPae":1,"IZdRfcZbJBMMEMO":1,"YdXfCDWOOWNTQBbLOVXJQJTTIPJLT":1,"OMTUSLLFTQZBQBTDRYQVXbKJKQXO":1,"BOZRSdJMIUDWcTPOaXGZXJeYWEYZLPYO":1,"OOOJYNdQEUbDQWEAWMCBWDfDC":1,"NAREFeDUfCfBePYeWWBTVYZfJfePZVJAFVRZaWe":2,"OMTUSLQPZSBdGdfDeQNAOIKe":2,"OMNQEDMPMfaNfGEbfWEdbKOeKe":1,"IZALOLOLOCYEIJfYTWRGMMdSYO":2,"OMIZdFSdGPPFKMBaDIbNMOKe":1,"BCMbbNCSBfXWaIJFKMBKIKdFHaO":1,"aMYTDVMeMZNBFWKZSUTIPTNFLFARfDXSBObDNBBLVbcOXT":1,"IZVaCQLOLOLOECVVDJYMTSJYMTBNFecMEO":1,"HMDOTdfKXYdKDAFTdZQBO":2,"NVNUdOKTfGCabPOZRTeCIFcFDSVBZDATYO":1,"MKMBNUAAVFSNAdEKSccTdC":1,"bZWOXaTFKGZFJbMYdNXYJfNUYOdKXfNVMYCTeSXNYFGYT":1,"TcZJFASESPBDOQPZVVbcHSWedNDeQfYYT":1,"IZVBdcaKZXSMZVHeCXLHbTDCYEISYETTTC":1,"IZVBdLTLCFPCYZBKZaeKe":1,"MKBUOMOOIBTBBeYDFJTcOXT":1,"bLTLbFNJNfAFBaTfYSbC":1,"PGVfCDWOOJMDcNUAddVT":1,"IZVaCQLOLOLOdWaeCXSQFaeMZFHSQZRO":1,"OOOTAIFOQJJYDCGVbGNXXSUdOUPTeRe":1,"BCAMJdURVcRAFRJFRQedFNAae":1,"eWfbOeERbWFUPQcUNAEKfPBDORe":1,"NVNZZFHVNdLAcQaHXeNVLDRbFDOZXFRT":1,"NAREDUbAMUVKKUHAbICfZSOeUPfBHT":1,"PGVfVPeUIeLATZdSfbXMRUMAdFET":1,"dVRAfIEcOBafTYDERXWUYdedUOTKe":1,"bZWOINZfMCUPVDHDFZARBJAcJIYINNC":1,"OMIZEZVZaaNRfVSWdAZfAC":1,"ZCPLJSEFKXNJdUcOcHIYLDbcaMEAKe":1,"VKZOFTOTdfEScXQOVPOMQfDbFWbTYUAFGbJae":1,"OTfdASFZNBLLfMKWe":1,"HCLeAeMUbZFVIQHNVCOBYPQBTbedcbOWSUISRe":1,"NAFQLFePNBBBTaSdJVcTSCZC":1,"OMIZEJPBYbFFfeNSOWe":1,"NQEDVVLSfBdVVVQSdafbOYO":2,"NQEDBYfbbXDMEO":2,"YPNCDIKTKEeCfXPRQVZMYIO":1,"IZdFSAPVFfFFZBBTcO":1,"IZVTWRGMMADDbddZQMdIVHDHe":1,"NAREDUaYZWZAEEFDXIVEFGYBC":1,"OUdAHFeDFbZYYfDeZYO":1,"TWIaQJMSKBZNXaTFKGWe":2,"IZVTWRGTZECUDDJeVGTZVNWe":1,"bZWOCUWdcCVIaJAZbNQRAPfMSLBLcVT":1,"ObUFcAPUZNBAFQRT":1,"bPQIMbSGAFLIUaRfYKdBcbPFMGKDKaT":1,"cQPPZeDUHYKe":1,"adUAVYCIFBUcAQDEVdZMTWbCGVbEfKFWC":2,"adUTWALTLdaWNOOdeBVOSWe":1,"NAREFBCdQddCcHOHNSBHe":1,"OMUTVeVDEZRdJBCDPJRWe":1,"ZOBJBeMSPOODFNbUPeDbYLAZHeEAPdcLYQC":1,"NQEDdeMOZGMKPFBPFUWe":1,"ebccCcCcCDSSBAUZTLO":1,"OMIdOccPSPDbMbJfdSDeSPeYdSZHO":1,"eRYZGQDaKLYRTPNfELT":1,"NVNUdOKTfGCbYDDIODeAWTAcEURJJRKe":1,"ZOKdJMMOHHACWEJdBKe":1,"IZVBEEEJTdCNdUDbfGYUMKBFPRe":1,"NVNUdOKTfGCbYDDIOSYcMADDbdEVLLXT":1,"YPNdKNKNKHRbHbOHcaMEAfMPSXWe":1,"UBKeJOOIBTAPVbIeIPNJBCC":1,"IZALOLOLOCYEIDIfAJYRZOJATXT":2,"OLBEPTJVZEYQLJAcC":1,"BIUJLMFPAAXXMecFTddKHeONfWJTAcHe":1,"YdXfdKNKNKPZZNbJNKPXVQEDZHFEQC":1,"HVNKdFZbSYILdCONdPbEXFRMPUIHe":1,"TcZJFASESPBDOQPZBTFAYTZTEeNGTOC":1,"IZdFSBJZGSBVHbTPZANUIUHe":1,"bPSLOceYeFTaNFeHdZCYJVbGC":1,"BKPBNHDAJJZAPTKYXT":1,"HWAFNUVSZHe":1,"ZOEUOLdaWOeWFeTXe":1,"IZVBdLTLCDdZYPUMVBFUWe":1,"NVNZZFBIUJLMDDDESKfXdfdTSZHe":1,"dVRAfIEcOBafTYFebEfKFWSHZTDMZC":1,"HWAFYbIeIPNQBFcDcRe":1,"NAFQCJWZUfUAAKMWEZCIFbNXGJaWePDSSFYHO":1,"PPXGWPJPLBJLeAVFbQGWFeSICZHe":1,"NVNUdKTVeBKeYEGZeHNDVeMWcDaWe":1,"aMYTDVMeMZNBFWKZSUTIPTNFLFVZUOfTJEPFWFQZHT":1,"PGVfEKQaJXVaNEQCFSeONSTBGCdKLRe":2,"IZALOLOLOAXZQAURAfPMMCIAFKKWe":1,"IZALOLOLOCYEIJfYXXZeGPNLTRe":1,"OTfdASFHBeTDLfMRRacCbZbEC":1,"BIUJLMFXRWeRFYLFSPKGUC":1,"ZOIFOLdaWOeWFeTXe":1,"NVNUdAaNCWQRAZUaDHOeWWbedeYBPJTDfePXGFDdDC":1,"NAREDUfZZGbMLUCFIMNWGRcUQAcSWXaIRdNFSKe":1,"ZdfaYZGbEILSXaOTLWLUHDSVPANXaIRdNC":1,"NVNUdOKTfGCabPOZRTeCIFYedGFdTeCFEDYcTNADZVO":1,"OOIBTCSLFJZZAeJRIVAfSZSIcaT":1,"OOOTAIFBUIESBAFLUQBDKe":1,"TWIaYPZZKPTJBbcGBCJLDbUabFZNYC":2,"eIBbdQETJTeVZdXdDHHEdQbUSGERGFaNFOEXFeMXISCWQQWe":1,"ZOCDCcMLaDeHZTSRT":1,"adUAVYCVGUVePWITBYbdIcPC":1,"BKPBHOUcbTDeLDbUTPOfFRWXCObYBKGO":1,"VVOcTRYZLWZWORTeCISUZEYYEO":1,"OOOTACDCcNMSOPfLXIePLeZAeUC":2,"IZALEZBVYNYPVIRPQZRO":1,"OMfEJdDBKSdfCOJZGC":1,"YPNVZMYCVCMIQQbHGAXFPWe":1,"NAFQNZIOLdaWNCFdUCWcYUcO":2,"cQPTEYcMWZNARaIFZeFcQYIMdYT":1,"MKMBNSQJUUeZOHFQWaSYFVLSHe":2,"IZVPQZaQDVLHaMO":1,"BCdSRfMGZcbTdNDNRe":1,"OMIZdPZSBacXVaPEQFSKe":1,"NVNUdOKTfGCbGbFGeMZAcGTFeFTGPbKe":1,"eDdJFBUaKAbCLJVXQUJBcJZJIfJJO":1,"NAFQCJWZUfUAAKMWEZCIFdWYLcbdFJO":1,"HMeBLcNQBYSBDNBcfdFET":1,"eDXBDYDRPQLQBTAcQaHICNRGFbNXGDJdFOCQMWC":1,"HDDZOWNdOZBYTZcYWHXGWe":1,"GfYQRfceDMaXfSMHSWedNTUQODWe":1,"cQZKZTWMO":1,"adUAVYCCDOTVAZdUaDdCEbHeFUPecLUTBUSIRDHT":1,"ZOCDWOOSfdQaUSHMEHTNHT":1,"ZCPLZOaXdRT":1,"AEeNTfaUSJXOTdQBDRVSQOLXMHO":1,"YPNOKTfGCbGQDfTLKGfIOeMBUUPXPRQOPDDJO":1,"XdKHKLOWWKRWHFAYTZTEeNGTODORMTfLT":1,"HVFBNZfADPRINfSFaMEAaZXe":1,"dVRAfIEcOMafTYJePaKEbHeFUPecLUBO":2,"ZOCDCcfCIeDNabYZTFNeKe":1,"ZdfaYZGbBYacWKYaIDJNMTfLXT":1,"IZVBETWRGMMHJSORBcVT":1,"IZVTWRGddAbDZdbEWaPPPTJAONJBHe":1,"NVNUdTJBEReASBIQC":1,"aDMSVTMIbBCdDDFQLNWe":2,"EFeLHNBYSBDYO":1,"NQEDCMHUaTTLQYT":1,"IZALOLOLOCYEIDIfAJYRZOJATIZSDWe":2,"GaQOMBUIESTNZRO":1,"HMeAcBEScDaIPTDWe":1,"IZVBdSccOcMMfOC":1,"EGTUSGbOJNET":1,"NVNUdTJBdRWMPNSMYZeEAQUaTFQeEGIGWe":1,"bZWOINZfMCUPCfBeTLNLbOMFcZSaT":1,"ZdfbaTaTaBBUcJZXQVaAbWccNOMO":1,"IZVBdLTQFCSDWLCUWFPeKOWBBO":1,"TYALOLOLOKOCSdbQFKFGYdRe":1,"OLBEUZTDOTOZHUDNCKKbUZdcLae":1,"dVRAfBDFIVZOFYZDNTNRKIOaXGHFBdcEUDBICGbSBfZGbFaT":1,"YQecfBfIHSHFTXbaXWIdYKe":1,"cQZJARGZWdQESUZGSRaPSPYSbC":2,"IZEZVZSIPTSGEMO":1,"ZOICQMPMaXbUdcCGZMFKUVXZePC":1,"adUTWAFcVWKHDEbeae":1,"BCMbbNCSBfXWaIJRKecNfbHWFZDHe":1,"dVRAfHbcGRcOBeDAfeAScZISHZVYXaWcPGOdMZC":1,"OTfdASFOLdaWOdRSOVLFCZSGbRFO":1,"NAZSNMKQKDJIHRXMJGBcNBRUDKe":1,"adUTWVJeVKcBBEbFeSICZHe":1,"OMHBXCEFDEQOSRKVNIfNFO":1,"eDEMBCKdSLWHWLTYDdJSGDUNVAaT":1,"HWAFNeOYFNbUPANNBUDLC":1,"IZAeHHOVFbJCEUaQYKe":2,"ZCPQSceIaSLAZWAcWOVAANLT":1,"NAZSNdQCNJdTAAUADfGOaYdOUHLQUdFUKVWe":1,"BdTeQFQFaLEaKXONVVRIcZMO":1,"dVRAfIEcAERJePdQXSJVITXbbFJIaO":1,"BOZRSdFKUOdZSEPFWFRWZXJGIJCTQYT":1,"HWAFYFaIVRQTKe":1,"NVNUdOKTfGCbYDDIODeEGGIGGXO":1,"cQPXYZBELWdZXZTQRHe":1,"IZVTWRGVZZQLPPPTJAONJBHe":1,"HWAFYYBXYBAeOCJO":1,"YdXfCDWOODSScSAcCJXfGPOSWEPGO":1,"HAKTNFDYBJbZCJLCcNDRMET":1,"PRFZReLYddDSUHRITEKLdMaMBNPDGYUC":1,"ZOdGNRYaBLbeTLBLcVT":1,"BOefZZGbOXHCcZLPdDZdLYCJZGRVOZXQae":1,"NAFLeNLFTQZdbEWaHRIXTcTAcNcfEEHFRT":3,"adUAVYCOTCDBYfCfFDZdSfbdIO":1,"bLEGPBDDUcbLWdPZWKAKBdEYT":1,"NQEDdLEXSRCVQMALHFMQRDHe":2,"HWAFYTbQfDbYPNSLae":1,"ZCPLccGSOJdXMRfUSBVbQVAHAZZBeKe":1,"EGTUSGbCDWOOJJTGJZZTEeEO":1,"BIUJLMJRcVMZIFRNYMdAcQUcTAcHe":1,"PGVfEbWcNRUbEWBSMDGOQFKFaT":1,"OTfdASFOMfaNbQANMfXLMdOXbSXT":1,"dVRAfIEcABTVVSUfCfeZKTNDKe":1,"ZCPLccGSOJdXMRfUFGFfPXPRLO":1,"OMHBVOINeUC":1,"NQEDdKARfDRbIUONSFTUQODWe":2,"BIUJLMDDSVbVUTcMYZUeQKBaTZOYaO":1,"IZVYNeCCZZNZWEJdSYO":1,"BIUJLMFPAAIBOIMdPBKFMKaYSJeRT":1},"m":"UmFuZG9tSVYkc2RlIyh9Yeq00oVnfi_Zf9YinBPZCD8hKFAIy66c7KtshaOBi-rphUWxlIhYxv9ToVjWw1aLBHtWV7uBnq3MblqLQolwwWYKrMLwlo2-NBCFvmPfT6CMLIUls4lSwcgmYJjloeKlKUbv7nz0AhPU8KTWtZg8aNxHErMtnMJeqoBYZFJIrz33WmDz9cv-q7f6z70vo_pBKg"};
+var jst = {};
+var jsdt = {};
+booking.jst = jst;
+booking.jsdt = jsdt;
+</script>
+ <script>
+;(function(){
+var envData = B.require('tmpl_data');
+if (!envData) return;
+envData({"b_action":"flexiproduct","b_aid":814732,"b_lang_for_url":"pt-br","pageview_id":"56cd06078f250110","b_site_type_id":1,"b_sid":"164c98e31a504bd0aa7b0a87574bd821"});
+}());
+</script>
+<script>
+(function(){
+var supportsIntersectionObserver = 'IntersectionObserver' in window &&
+'IntersectionObserverEntry' in window &&
+'intersectionRatio' in window.IntersectionObserverEntry.prototype &&
+'isIntersecting' in window.IntersectionObserverEntry.prototype;
+B.env.et_view_observers = supportsIntersectionObserver && 0;
+B.et = B.require('et');
+var ViewTrackingEvents = (function() {
+var desktopEvents = [
+'GENERAL:dom_changed',
+'GENERAL:layout_changed',
+'GENERAL:throttled_scroll',
+'GENERAL:throttled_resize',
+'tab-opened',
+'user_access_menu_register_tab',
+'user_access_menu_login_tab',
+'uc_popover_showed',
+'rt-lightbox-open',
+'rt-lightbox-closed',
+'tooltip:show',
+'reviews-sliding:scroll',
+'et-scroll-observer:scroll'
+];
+var mdotEvents = [
+'HP.MAP.OPEN.COMPLETE',
+'HP.block.expand',
+'tabbed_nav:opened',
+'RT.room.page.scrolls'
+];
+return [].concat(desktopEvents, mdotEvents);
+}());
+var ajaxHeaders = {
+'X-Booking-AID': '814732',
+'X-Booking-CSRF': 'T53SWwAAAAA=QgpwY24Jdpl_PwAS1IIunz3vq8qFyjQIaJ6jkZ7ljoWeJPIF2IJ86kywCABuQzb0Wddqc_KjN4bAwkR-zP9K4v0VTdI8eslATZhyZC8Wg_QPzlcJSLHjY1uaHNAij3Pb0Ivf27T25AnuRPmQAnpxa90eN8uMFHmik3WTS6ocPbfBhKc6RrazykYxxQScMwP3bgxyyBWgJ_UaABPn',
+'X-Booking-Info': function(){ return (document && document.getElementById('req_info')) ? document.getElementById('req_info').innerHTML : '' },
+'X-Booking-Client-Info': function() { return B.et.tracked() },
+'X-Booking-Label': encodeURIComponent(''),
+'X-Booking-Language-Code': 'pt-br',
+'X-Booking-Pageview-Id': '56cd06078f250110',
+'X-Booking-Session-Id': '164c98e31a504bd0aa7b0a87574bd821',
+'X-Booking-SiteType-Id': '1',
+'X-Partner-Channel-Id': '2',
+'X-Requested-With': 'XMLHttpRequest'
+};
+var extraAjaxHeaders = {};
+for (var extraAjaxHeader in extraAjaxHeaders) {
+if (Object.prototype.hasOwnProperty.call(extraAjaxHeaders, extraAjaxHeader)) {
+ajaxHeaders[extraAjaxHeader] = extraAjaxHeaders[extraAjaxHeader];
+}
+}
+B.et.configure({
+url: "/js_tracking?ver=2&sid=164c98e31a504bd0aa7b0a87574bd821&pid=56cd06078f250110&stype=1&ref_action=flexiproduct&aid=814732&lang=pt-br",
+noJqueryAjax: true,
+noJqueryOn: true,
+ajaxHeaders: ajaxHeaders,
+bindOnView: function(onViewHandler) {
+B.eventEmitter && B.eventEmitter.bind(ViewTrackingEvents.join(' '), onViewHandler);
+if(document.addEventListener) {
+document.addEventListener('DOMContentLoaded', function() {
+B.eventEmitter && B.eventEmitter.bind(ViewTrackingEvents.join(' '), onViewHandler);
+});
+}
+},
+unbindOnView: function(onViewHandler) {
+B.eventEmitter && B.eventEmitter.unbind(ViewTrackingEvents.join(' '), onViewHandler);
+},
+jset: B.jset || { r: {}, t: {}, f: {}}
+});
+var $ = B.require('jquery');
+$(document).ready(function() {
+B.et.initAttributesTracking();
+if(B.env.et_view_observers){
+B.et.stage('GCaDJPdUOLKMSZEJPSfYWdRe', 2);
+}
+});
+}());
+</script>
+<script>
+$.ajaxSetup({
+beforeSend: function(xhr) {
+if (B.env.csrf_token) {
+xhr.setRequestHeader('X-Booking-CSRF', B.env.csrf_token);
+}
+}
+});
+</script>
+<script>
+$(function(){ if (window.parent != window) { try { window.parent.postMessage('prodLoaded', '*'); } catch (e) {} } });
+</script>
+
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 2000; top: 0px; left: 0px; position: absolute; display: none;"></ul></body></html>

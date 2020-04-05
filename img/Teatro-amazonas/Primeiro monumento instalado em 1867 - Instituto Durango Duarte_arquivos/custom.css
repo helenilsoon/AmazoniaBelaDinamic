@@ -1,0 +1,8 @@
+.vc_btn3.vc_btn3-size-sm {
+    font-size: 12px;
+    padding: 0 !important;
+}
+.vc_btn3.vc_btn3-color-black, .vc_btn3.vc_btn3-color-black.vc_btn3-style-flat {
+    color: #fff;
+    background-color: #000;
+}
