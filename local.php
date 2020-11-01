@@ -166,7 +166,7 @@ if (isset($_GET['cod'])) {
 
         <?php
 
-        include "aside.php";
+        require_once"aside.php";
 
         ?>
         <!-- Mapa-->

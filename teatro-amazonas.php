@@ -114,7 +114,7 @@ include"fb.php";
 
 		<?php
 
-		include "aside.php";
+		require_once "aside.php";
 
 		?>
 		<!-- Mapa-->
