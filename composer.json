@@ -1,0 +1,20 @@
+{
+    "name": "helenilson/www",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        },
+        "files": [
+            "Config/config.php",
+            "Config/Conexao.php",
+            "Config/Debug.php"
+        ]
+
+    },
+
+    "authors": [{
+        "name": "helenilson",
+        "email": "helenilsoon@gmail.com"
+    }],
+    "require": {}
+}
