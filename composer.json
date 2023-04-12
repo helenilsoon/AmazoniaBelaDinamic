@@ -7,7 +7,8 @@
         "files": [
             "Config/config.php",
             "Config/Conexao.php",
-            "Config/Debug.php"
+            "Config/Debug.php",
+            "Config/Router.php"
         ]
 
     },

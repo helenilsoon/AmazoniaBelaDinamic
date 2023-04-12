@@ -10,10 +10,17 @@ class PontoTuristicoController
 
     public function index()
     {
+        $data =[
+            'title'=>'Cadastro de pontos turistico',
+            'url'=>'Cadastro de pontos turistico',
+            'description'=>'Cadastro de pontos turistico',
+            
+        ];
         $categoria = new CategoriaController();
         $categoria = $categoria->getCategoria();
         
-        $view = LoadViewsController::loadViews('pontos_turistico_view',$categoria);
+        
+        $view = LoadViewsController::loadViews('pontos_turistico_view',$data,$categoria);
         echo $view;
 
     }

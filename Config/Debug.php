@@ -10,9 +10,12 @@ class Debug{
         print_r($data);
         echo'</pre>';
     }
-    public static function varDump($data)
+
+    //classe que ta chamando e os dados
+    public static function dump($data)
     {
-        echo'<pre>';
+        echo'<pre>';      
+        //echo "ClasseName: ".get_class($thiss);
         var_dump($data);
         echo'</pre>';
     }

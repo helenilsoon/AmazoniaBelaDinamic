@@ -31,12 +31,14 @@
 								<select name="idcategoria">
 									<option value=""> Selecione </option><br>";
 									<?php
-                                                                        
-                                            foreach($data as $values){
+                                                                    
+                                            foreach($dataObject as $values){
+												
                                                 echo "<option value=" .$values['id_categoria']. ">" .$values['categoria']."</option><br>";
                                                 
                                             
                                             }
+											
                                             
 								    ?>
 								</select>
