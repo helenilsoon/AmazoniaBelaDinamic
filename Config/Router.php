@@ -32,16 +32,16 @@ class Router
 		
 		
 		if ($isAdminUrl) {
-				dump('entrando na paginas adm');
+				
 			$uri = $this->getPagesAdmin($uri);
 			
 		} else if ($isTouristSpot){
 			
-			dump('entrando na pagina de tourist spot');
+			
 			$uri = $this->getPagesTouristSpot($uri);
 			
 		} else{
-			dump('entrando na pagina comum');
+			
 			$uri = $this->getPages($uri);
 		}
 	}
@@ -84,7 +84,7 @@ class Router
 
 			list($controller, $method) = explode('@', $routes[$uri]);
 			list($method, $page) = explode(':', $method);
-			 dump($page);
+			 
 
 			$namespaceIntace = "App\\Controllers\\$controller";
 
