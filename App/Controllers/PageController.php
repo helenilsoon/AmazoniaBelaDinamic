@@ -7,12 +7,15 @@ abstract class PageController
     private $head =[];
     private $content;
 
-    public function index($page)
+    public function index($page,$data = [], $dataObject = [])
     {
         $head = $this->getHead();
         ob_start();
 
         extract($head);
+        extract($data);
+        extract($dataObject);
+        
         require_once  PATH."/App/Views/_head.php";
         require_once  PATH."/App/Views/_menu.php";
         require_once  PATH."/App/Views/".$page."Views.php";

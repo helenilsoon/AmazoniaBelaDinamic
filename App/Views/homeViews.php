@@ -8,7 +8,7 @@
 			</div>
 			<div class="slide">
 				<div class="numbertext">1/4</div>
-				<img src="img/Arara.jpg" style="width:100%" />
+				<img src="../img/Arara.jpg" style="width:100%" />
 				<div class="text">Caption text 1</div>
 
 				<!-- <div class="bemvindo">
@@ -58,7 +58,7 @@
 		<div class="container-box-pontos">
 			<div class="box-pontos">
 				<div class="prin-ponto">
-					<a href="?p=teatro-amazonas">
+					<a href="teatro-amazonas">
 						<figure>
 							<img src="img/Teatro-amazonas/Teatro-amazonas.jpg">
 							<legend>
