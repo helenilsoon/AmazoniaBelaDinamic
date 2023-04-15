@@ -14,11 +14,9 @@ class touristSpotController extends PageController
 
     public function getTouristSpot($touristSpot)
     {
-        $data = TouristSpot::get($touristSpot);
-
-        foreach($data as $d){
-            
-        }
+        $data = TouristSpot::selectURl($touristSpot);
+        
+        foreach($data as $d){}
 
         return $d;
     }

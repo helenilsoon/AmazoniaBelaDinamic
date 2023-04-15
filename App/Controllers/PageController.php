@@ -6,15 +6,20 @@ abstract class PageController
 {
     private $head =[];
     private $content;
+    private $dataObject=[];
 
-    public function index($page,$data = [], $dataObject = [])
+    public function index($page,$data = [], $objectData = [])
     {
+        
+        $ObjectDataToview=$this->getData();
+
         $head = $this->getHead();
         ob_start();
-
+        
         extract($head);
         extract($data);
-        extract($dataObject);
+        extract($objectData);
+        extract($ObjectDataToview);
         
         require_once  PATH."/App/Views/_head.php";
         require_once  PATH."/App/Views/_menu.php";
@@ -30,6 +35,15 @@ abstract class PageController
 
 
     }
+    public function setData($data){
+        
+       $this->dataObject = $data;
+    }
+    public function getData(){
+       
+        return $this->dataObject;
+     }
+    public function addDataObjectToview(){}
     public function setHead(string $title ='', string $url ='', string $description ='')
     {
         $this->head['title']= $title;
