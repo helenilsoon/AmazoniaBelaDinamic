@@ -32,6 +32,3 @@
 
 	<!--   incio Rodape -->
 	</div>
-	<?php require_once("rodape.php"); ?>
-
-	<?php mysqli_close($conexao); ?>

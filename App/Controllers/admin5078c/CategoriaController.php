@@ -9,10 +9,16 @@ class CategoriaController
 {
     private $content;
 
-    public function index(array $data =[])
+    public function index()
     { 
-               
-        $view = LoadViewsController::loadViews('categorias_view');
+        $data =[
+            'title'=>'Cadastro de Categoria',
+            'url'=>'',
+            'description'=>'Cadastro de categorias',
+            
+        ];
+
+        $view = LoadViewsController::loadViews('categorias_view',[],$data);
         echo $view;
        
 

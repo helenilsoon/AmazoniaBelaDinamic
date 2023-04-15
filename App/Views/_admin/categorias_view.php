@@ -3,21 +3,21 @@
 
 
 if(!isset($_SESSION['username'])) {
-    header("location: ?p=login");
+    //header("location: ?p=login");
 }
 ?>
 
 
 
 	<div class="btn_gerenciameto">	
-		<button><a href="cadastro_categoria.php">Cadastro categoria</a></button>
-		<button><a href="cadastro_pontos_turistico.php">cadastra ponto turistico</a></button>
+		<button><a href="cadastro_categoria">Cadastro categoria</a></button>
+		<button><a href="cadastro_pontos_turistico">cadastra ponto turistico</a></button>
 	</div>
 	<section class="container-pagDois">
 		<article class="box-pagDois">
 			<ol>
-				<li><a href="index.php">inicio</a></li>
-				<li><a href="cadastro_pontos_turistico.php">cadastra ponto turistico</a></li>
+				<li><a href="/admin78955">inicio</a></li>
+				<li><a href="/admin78955/cadastro_categoria">cadastro categoria</a></li>
 			</ol>
 			<h1>Cadastrar categorias</h1>
 			<div class="boxGaleria">

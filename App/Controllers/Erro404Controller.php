@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
+use App\Controllers\PageController;
 
 class Erro404Controller extends PageController
 {

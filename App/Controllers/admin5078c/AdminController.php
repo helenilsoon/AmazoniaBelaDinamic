@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\admin5078c;
 
 use App\Controllers\admin5078c\CategoriaController;
 use App\Controllers\admin5078c\PontoTuristicoController;
